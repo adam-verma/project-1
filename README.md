@@ -1,12 +1,13 @@
 # project-1
 
-# Name of Project
+# NutritFit
 
-> [Live Site](Put the deployed link here once you have it)
+> [Live Site]
 
 ## Project Summary
 
 > Describe the problem or mission statement of the project in 2 - 3 sentences.
+Our mission for this site is to provide dietary plans and fitness product suggestions to clients for improving 
 
 ## Developers
 
