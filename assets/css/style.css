@@ -1,13 +1,27 @@
 
+body {
+    background-color: rgb(149, 207, 149);
+}
+label {
+    font-size: 18px;
+}
+
 .input-form-signin {
 font-family: 'Be Vietnam', sans-serif;
 font-family: 'Lora', serif;
 font-family: 'Mansalva', cursive;
 font-family: 'Kalam', cursive;
-width: 500px;
-box-shadow: 0 0 3px rgb(133, 163, 124);
-padding: 20px;
-margin: 8% auto 0;
-text-align: center;
-position: relative;
+width: 400px;
+padding: 15px;
+margin: -60% 11% 8% 32%;
+opacity: 0.9; 
+z-index: 0;
 }
+
+#form-image {
+    width: 450px;
+    height: 590px;
+    margin: 4% 9% 8% 30%;
+    position: relative;
+}
+
