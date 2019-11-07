@@ -4,4 +4,9 @@ font-family: 'Be Vietnam', sans-serif;
 font-family: 'Lora', serif;
 font-family: 'Mansalva', cursive;
 font-family: 'Kalam', cursive;
+width: 500px;
+box-shadow: 0 0 3px rgb(133, 163, 124);
+margin: 8% auto;
+text-align: center;
+position: relative;
 }
