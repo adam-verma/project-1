@@ -6,7 +6,8 @@ font-family: 'Mansalva', cursive;
 font-family: 'Kalam', cursive;
 width: 500px;
 box-shadow: 0 0 3px rgb(133, 163, 124);
-margin: 8% auto;
+padding: 20px;
+margin: 8% auto 0;
 text-align: center;
 position: relative;
 }
