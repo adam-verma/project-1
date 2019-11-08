@@ -5,6 +5,13 @@ label {
     color: rgb(30, 68, 30);
 }
 
+.jumbotron {
+    opacity: 0.6;
+    background-color: rgb(98, 187, 98);
+    color: rgb(30, 68, 30);
+    margin-top: 3%;
+}
+
 .input-form-signin {
     font-family: 'Be Vietnam', sans-serif;
     font-family: 'Lora', serif;
@@ -24,8 +31,25 @@ label {
     font-family: 'Catamaran', sans-serif;
     background-color: transparent;
     padding: 15px;
-    margin-top: 5%;
+    margin-top: 2%;
 }
+
+.navbar-input{
+    font-family: 'Be Vietnam', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Mansalva', cursive;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(98, 187, 98);
+ 
+  }
+
+  .navbar-btn {
+    background: rgb(50, 119, 50);
+    border: 2px solid rgb(35, 109, 35);
+  }
 
 #signin-page {
     background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
