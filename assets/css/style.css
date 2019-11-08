@@ -1,12 +1,5 @@
 
-body {
-    background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover;
-    background-repeat: no-repeat
-}
+
 label {
     font-size: 18px;
     color: rgb(30, 68, 30);
@@ -22,6 +15,15 @@ label {
     margin: -153% 11% 9% 5%;
     opacity: 0.9; 
     z-index: 0;  
+}
+
+#signin-page {
+    background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
+    background-repeat: no-repeat
 }
  
 #form-image {
