@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <!-- For responsive to device -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Creating Account</title>
+        <title>Form</title>
         <!-- Bootstrap File -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- css File -->
@@ -51,19 +51,19 @@
                     <form class="input-form-question">
                         <div class="form-group">
                             <label for="name-input"><strong>First Name</strong></label>
-                            <input type="text" class="form-control" id="name-input">
+                            <input type="text" class="form-control" id="name-input" placeholder="Enter your name">
                         </div>
                         <div class="form-group">
                             <label for="lastname-input"><strong>Last Name</strong></label>
-                            <input type="text" class="form-control" id="lastname-input">
+                            <input type="text" class="form-control" id="lastname-input" placeholder="Enter your last name">
                         </div>
                         <div class="form-group">
                             <label for="phone-number-input"><strong>Phone Number</strong></label>
-                            <input type="number" class="form-control" id="phone-number-input" placeholder="Enter phone number">
+                            <input type="phone number" class="form-control" id="phone-number-input" placeholder="Enter phone number">
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-3">
                                 <label for="gender-input"><strong>Gender</strong></label>
                                 <select id="gender-input" class="form-control">
                                     <option selected>Choose...</option>
@@ -71,7 +71,12 @@
                                     <option>Male</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-6">
+                                    <label for="date of birth-input"><strong>Date Of Birth</strong></label>
+                                    <input type="date" class="form-control" id="date of birth-input">
+                            </div>
+
+                            <div class="form-group col-md-3">
                             <label for="blood-input"><strong>Blood Type</strong></label>
                             <select id="blood-input" class="form-control">
                                 <option selected>Choose...</option>
