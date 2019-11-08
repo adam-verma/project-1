@@ -17,11 +17,30 @@ label {
     z-index: 0;  
 }
 
+.input-form-question {
+    font-family: 'Be Vietnam', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Mansalva', cursive;
+    font-family: 'Catamaran', sans-serif;
+    background-color: transparent;
+    padding: 15px;
+    margin-top: 5%;
+}
+
 #signin-page {
     background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
     -webkit-background-size: cover; 
     -moz-background-size: cover; 
     -o-background-size: cover; 
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+#form-page {
+    background-image: url("../images/brooke-lark-08bOYnH_r_E-unsplash.jpg");
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover;  
     background-size: cover;
     background-repeat: no-repeat
 }
@@ -36,6 +55,11 @@ label {
 }
 
 #submit-form {
+    background: rgb(50, 119, 50);
+    border: 2px solid rgb(35, 109, 35);
+}
+
+#submit-question {
     background: rgb(50, 119, 50);
     border: 2px solid rgb(35, 109, 35);
 }
