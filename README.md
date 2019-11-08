@@ -1,12 +1,15 @@
 # project-1
 
-# Name of Project
+# NutritFit
 
-> [Live Site](Put the deployed link here once you have it)
+> [Live Site]
 
 ## Project Summary
 
-this is a web site which can gives you diet depends on your body type by recieving some information from client. there are some sections for articles related to nutrition and toturial for makking healthy foods and also you can purchase some products related to diet
+> This is a web site which can gives you diet depends on your body type by recieving some information from client. there are some sections for articles related to nutrition and toturial for makking healthy foods and also you can purchase some products related to diet
+Describe the problem or mission statement of the project in 2 - 3 sentences.
+Our mission for this site is to provide dietary plans and fitness product suggestions to clients for improving 
+
 
 ## Developers
 
