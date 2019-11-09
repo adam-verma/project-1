@@ -24,13 +24,6 @@ opacity: 0.9;
 z-index: 0;
 }
 
-#form-image {
-    width: 400px;
-    height: 570px;
-    margin: 4% 1% 8% 1%;
-    opacity: 0.9;  
-    position: relative;
-}
 
 #submit-form {
     background: rgb(50, 119, 50);
