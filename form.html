@@ -32,35 +32,21 @@
                         </li>
                     </ul>
                 </div>
-                <button type = "button" class = "btn btn-success navbar-btn">Navbar Button</button>
+                <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success my-2 my-sm-0 mr-2" type="submit">Search</button>
+                </form>
+                <button type = "button" class = "btn btn-success navbar-btn mr-2"> Sign In</button>
+                <button type = "button" class = "btn btn-success navbar-btn"> Sign Out</button>
             </nav>
         <div class="container"> 
 
-                  <!-- Jumbotron with title and music -->
-            <div class="jumbotron">
-                    <h1 class="text-center">
-                    <strong>Nutrit Fit </strong>
-                    </h1>
-                    <hr>
-                </div>
             <div class="row">
 
                 <div class="col-lg-7 col-sm-12 col-md-8"></div>
                 <div class="col-lg-5 col-sm-12 col-md-8">
                     <!-- creating form for creating account -->
                     <form class="input-form-question">
-                        <div class="form-group">
-                            <label for="name-input"><strong>First Name</strong></label>
-                            <input type="text" class="form-control" id="name-input" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname-input"><strong>Last Name</strong></label>
-                            <input type="text" class="form-control" id="lastname-input" placeholder="Enter your last name">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone-number-input"><strong>Phone Number</strong></label>
-                            <input type="phone number" class="form-control" id="phone-number-input" placeholder="Enter phone number">
-                        </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-3">
@@ -101,8 +87,158 @@
                                         <input type="number" class="form-control" id="height-input" placeholder="6 inch">
                                 </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                    <strong>do you have an allergy?</strong>
+                            </div>
+                            <div class="form-group form-check mr-2">
+                                <input type="checkbox" class="form-check-input" id="Yes-check">
+                                <label class="form-check-label" for="exampleCheck1">yes</label>
+                            </div>
+                            <div class="form-group form-check mr-2">
+                                <input type="checkbox" class="form-check-input" id="No-check">
+                                <label class="form-check-label" for="exampleCheck1">No</label>
+                            </div>
+                        </div>
+                        <!-- creating form for foods -->
+                        <div class="form-row">
+                                <div class="form-group col-md-12"> 
+                                    <label for="allergy-input"><strong>What would you prefer eating?</strong></label>
+                                </div>
+                        </div>
+                                        <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                        <label for="meat-input"><strong>Meat</strong></label>
+                                                </div>
+                                        </div>
+                                        <div class="form-row">
+
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="chiken-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Chiken</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="salmon-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Salmon</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Beef-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Beef</label>
+                                                    </div>
+                                                    <div class="form-group form-mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Pork-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Pork</label>
+                                                    </div>
+
+                                        </div>
+                                        <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                        <label for="meat-input"><strong>Carbs</strong></label>
+                                                </div>
+                                        </div>
+                                        <div class="form-row">
+                                            
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Quinoa-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Quinoa</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="White-Rice-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">White Rice</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Brwon-Rice-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Brwon Rice</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Cous-Cous-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Cous Cous</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Oats-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Oats</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Sweet-Potato-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Sweet Potato</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Potato-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Potato</label>
+                                                    </div>
+
+                                        </div>
+
+                                        <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                        <label for="meat-input"><strong>Vegis</strong></label>
+                                                </div>
+                                        </div>
+                                        <div class="form-row">
+                                            
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Eggplant-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Eggplant</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Spinach-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Spinach</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Carrot-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Carrots</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Celery-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Celery</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Green-beans-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Green Beans</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Onion-Potato-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Onions</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Squash-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Squash</label>
+                                                    </div>
+
+                                        </div>
+                                        <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                        <label for="meat-input"><strong>Fats</strong></label>
+                                                </div>
+                                        </div>
+                                        <div class="form-row">
+                                            
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Almonds-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Almonds</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Avocado-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Avocado</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="olive-oil-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Extra Virgin Olive Oil</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Chia-seed-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Chia seed</label>
+                                                    </div>
+                                                    <div class="form-group form-check mr-2">
+                                                            <input type="checkbox" class="form-check-input" id="Coconut-oil-Check">
+                                                            <label class="form-check-label" for="exampleCheck1">Coconut oil</label>
+                                                    </div>
+
+
+                                        </div>
+                        
                         <button type="submit" id="submit-question" class="btn btn-success">Sign in</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ label {
     color: rgb(30, 68, 30);
 }
 
+
 .jumbotron {
     opacity: 0.6;
     background-color: rgb(98, 187, 98);
@@ -50,6 +51,11 @@ label {
     background: rgb(50, 119, 50);
     border: 2px solid rgb(35, 109, 35);
   }
+/* 
+  .form-check-label .form-check-input {
+    font-size: 18px;
+    margin-right: 4px;
+  } */
 
 #signin-page {
     background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
@@ -62,6 +68,15 @@ label {
 
 #form-page {
     background-image: url("../images/brooke-lark-08bOYnH_r_E-unsplash.jpg");
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover;  
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+#main-page {
+    background-image: url("../images/assorted-fruits-on-white-surface-775031.jpg");
     -webkit-background-size: cover; 
     -moz-background-size: cover; 
     -o-background-size: cover;  
@@ -87,4 +102,5 @@ label {
     background: rgb(50, 119, 50);
     border: 2px solid rgb(35, 109, 35);
 }
+
 
