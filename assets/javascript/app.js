@@ -1,54 +1,54 @@
  // Create objects for each body type 
 
 userShape = { 
-    height,
-    weight,
-    age,
-    gender,
+    height: 0,
+    weight: 50,
+    age: 0,
+    gender: '',
     types: [
     {   id: 'athlete',
-        rec_carbs: 3*weight,
-        rec_prots: 1.5*weight,
-        rec_fats: 0.45*weight,
-        diet: balanced,
+        rec_carbs: 3*this.weight,
+        rec_prots: 1.5*this.weight,
+        rec_fats: 0.45*this.weight,
+        diet: 'balanced',
     },
     {   id: 'active',
-        rec_carbs: 2*weight,
-        rec_prots: 1.1*weight,
-        rec_fats: 0.4*weight,
-        diet: high-protein,
+        rec_carbs: 2*this.weight,
+        rec_prots: 1.1*this.weight,
+        rec_fats: 0.4*this.weight,
+        diet: 'high-protein',
     },
     {   id: 'sedentary',
-        rec_carbs: 0.9*weight,
-        rec_prots: 0.7*weight,
-        rec_fats: 0.4*weight,
-        diet: low-carb,
+        rec_carbs: 0.9*this.weight,
+        rec_prots: 0.7*this.weight,
+        rec_fats: 0.4*this.weight,
+        diet: 'low-carb',
     },
     {   id: 'overweight',
-        rec_carbs: 0.7*weight,
-        rec_prots: 0.7*weight,
-        rec_fats: 0.3*weight,
-        diet: low-fat,
+        rec_carbs: 0.7*this.weight,
+        rec_prots: 0.7*this.weight,
+        rec_fats: 0.3*this.weight,
+        diet: 'low-fat',
     },
     {   id: 'obese',
-        rec_carbs: 0.5*weight,
-        rec_prots: 0.5*weight,
-        rec_fats: 0.25*weight,
-        diet: low-fat,
+        rec_carbs: 0.5*this.weight,
+        rec_prots: 0.5*this.weight,
+        rec_fats: 0.25*this.weight,
+        diet: 'low-fat',
     }]
 };
 
   // displayNutritionInfo function re-renders the HTML to display the appropriate content
   function displayNutritionInfo() {
 
-    const foodGroupItem = [];
-    for (i=0; i<userShape.types[i].length; i++) {
-        typeDiet = userShape.types.diet;
-        typeId = userShape.types.id; 
+    const foodGroupItem = ['chicken'];
+    for (let i=0; i<userShape.types.length; i++) {
+        typeDiet = userShape.types[i].diet;
+        typeId = userShape.types[i].id; 
         console.log(typeDiet);
-    }
+    
     const  queryURL =
-      `https://api.edamam.com/search?q=${foodGroupItem}&diet=${diet}&app_id=72b0f0df`;
+      `https://api.edamam.com/search?q=${foodGroupItem}&diet=${typeDiet}&app_id=72b0f0df`;
     console.log(queryURL);
     // Creating an AJAX call for the specific gif button being clicked
     $.ajax({
@@ -76,13 +76,10 @@ userShape = {
 
       // Putting the entire gif above the previous gifs
       $("#recipe-view").prepend(dietDiv);
-      
-    };
-  });
-  };
-$(document).on("click",".diet",function () {
-     
+      }
     });
+  };
+}
 
   // This function handles events where a foodGroupItem box is checked
   $("#add-foodGroupItem").on("click", function (event) {
@@ -102,32 +99,33 @@ $(document).on("click",".diet",function () {
 
 
 
-bodyIndex = {
+// bodyIndex = {
 
-   // Create a function that performs an API call for the BMR 
-   displaybmrInfo = function() {
+//    // Create a function that performs an API call for the BMR 
+//    displaybmrInfo = function() {
     
-    const userHeight = parseInt($(this).attr("data-height"));
-    const userWeight = parseInt($(this).attr("data-weight"));
-    const userAge =  pareInt($(this).attr("data-age"));
-    const userGender =  toString($(this).attr("data-gender"));
+//     const userHeight = parseInt($(this).attr("data-height"));
+//     const userWeight = parseInt($(this).attr("data-weight"));
+//     const userAge =  pareInt($(this).attr("data-age"));
+//     const userGender =  toString($(this).attr("data-gender"));
     
-    const queryURL =
-      `https://urvipaithankar.herokuapp.com/bmr/index.php/${userHeight}/${userWeight}/${userAge}/${userGender}`;
-    console.log(queryURL);
-    // Creating an AJAX call for the specific gif button being clicked
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function (response) {
-      const results = response.data;
-    });
+//     const queryURL =
+//       `https://urvipaithankar.herokuapp.com/bmr/index.php/169/50/25/male`;
+//     console.log(queryURL);
+//     // Creating an AJAX call for the specific gif button being clicked
+//     $.ajax({
+//       url: queryURL,
+//       method: "GET"
+//     }).then(function (response) {
+//       const results = response.data;
+//     });
     
-  },
+//   // },
 
-  bodyFatCalculator = function() {
-    const bodyCF = []; 
-    female_body_fat =[163.205*Math.log10(waist + hip - neck)] - [97.684 * Math.log10(height)] - 78.387
-    male_body_fat = [86.010*Math.log10(waist - neck)] - [70.041 * Math.log10(height)] + 36.76
-  }
-};
+//   bodyFatCalculator = function() {
+//     const bodyCF = []; 
+//     female_body_fat =[163.205*Math.log10(waist + hip - neck)] - [97.684 * Math.log10(height)] - 78.387
+//     male_body_fat = [86.010*Math.log10(waist - neck)] - [70.041 * Math.log10(height)] + 36.76
+//   }
+// // };
+displayNutritionInfo();
