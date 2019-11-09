@@ -6,8 +6,15 @@
 
 ## Project Summary
 
+<<<<<<< HEAD
 > Describe the problem or mission statement of the project in 2 - 3 sentences.
 Our mission for this site is to provide dietary plans and fitness product suggestions to clients for boosting health and body confidence. 
+=======
+> This is a web site which can gives you diet depends on your body type by recieving some information from client. there are some sections for articles related to nutrition and toturial for makking healthy foods and also you can purchase some products related to diet
+Describe the problem or mission statement of the project in 2 - 3 sentences.
+Our mission for this site is to provide dietary plans and fitness product suggestions to clients for improving 
+>>>>>>> 90337dee110cd9aabacb3d48368371109a58c1f7
+
 
 ## Developers
 

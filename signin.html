@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <meta charset="UTF-8">
+        <title>Creating Account</title>
+        <!-- Bootstrap File -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- css File -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- google font File -->
+        <link href="https://fonts.googleapis.com/css?family=Be+Vietnam|Kalam|Lora|Mansalva&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+             <!-- image for form -->
+            <img src="./assets/images/form 1.jpg" alt="diet" id="form-image" class="img-thumbnail">
+            <!-- creating form for creating account -->
+            <form class="input-form-signin">
+                <div class="form-group">
+                  <label for="input-email"><strong>Email address</strong></label>
+                  <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="password-input"><strong>Password</strong></label>
+                  <input type="password" class="form-control" id="password-input" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <label for="Confirm-password-input"><strong>Confirm Password</strong></label>
+                  <input type="password" class="form-control" id="Confirm-password-input" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1"><strong>I agree with Term and Conditions</strong></label>
+                </div>
+                <button type="submit" id="submit-form" class="btn btn-primary">Creating Account</button>
+            </form>
+        </div>
+    </body>
+</html>
