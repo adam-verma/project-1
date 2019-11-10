@@ -1,4 +1,24 @@
- // Create objects for each body type 
+database = firebase.database; 
+
+//sign up
+const signupForm = $('.input-form-signin');
+signupForm.on('click','#submit-button',function(event) {
+  event.preventDefault; 
+
+  // get User info
+  const email = signupForm['#input-email'].val(); 
+  const password = signupForm['#input-email'].val(); 
+
+  // sign up the user
+  auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    console.log(cred.user);
+
+  })
+})
+
+// create a listener for chosen foodgroupItems input to push to 
+
+// Create objects for each body type 
 
 userShape = { 
     height: 0,
@@ -99,33 +119,29 @@ userShape = {
 
 
 
-// bodyIndex = {
+bodyIndex = {
 
-//    // Create a function that performs an API call for the BMR 
-//    displaybmrInfo = function() {
+   // Create a function that performs an API call for the BMR 
+   displaybmrInfo = function() {
     
-//     const userHeight = parseInt($(this).attr("data-height"));
-//     const userWeight = parseInt($(this).attr("data-weight"));
-//     const userAge =  pareInt($(this).attr("data-age"));
-//     const userGender =  toString($(this).attr("data-gender"));
+    const userHeight = parseInt($(this).attr("data-height"));
+    const userWeight = parseInt($(this).attr("data-weight"));
+    const userAge =  pareInt($(this).attr("data-age"));
+    const userGender =  toString($(this).attr("data-gender"));
     
-//     const queryURL =
-//       `https://urvipaithankar.herokuapp.com/bmr/index.php/169/50/25/male`;
-//     console.log(queryURL);
-//     // Creating an AJAX call for the specific gif button being clicked
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET"
-//     }).then(function (response) {
-//       const results = response.data;
-//     });
-    
-//   // },
+    bmrFormula = {
+    const gender: '',
+    female_bmr: 655 + (4.35 * weight) + (4.7 * height) - (4.7 * age),
 
-//   bodyFatCalculator = function() {
-//     const bodyCF = []; 
-//     female_body_fat =[163.205*Math.log10(waist + hip - neck)] - [97.684 * Math.log10(height)] - 78.387
-//     male_body_fat = [86.010*Math.log10(waist - neck)] - [70.041 * Math.log10(height)] + 36.76
-//   }
-// // };
-displayNutritionInfo();
+    male_bmr: 66 + (6.23 * weight) + (12.7 * height) - (6.8 * age),
+   };
+
+   bmiFormula = (weight / (height * height)) * 703;
+
+  bodyFatCalculator = function() {
+    const bodyCF = []; 
+    female_body_fat =[163.205*Math.log10(waist + hip - neck)] - [97.684 * Math.log10(height)] - 78.387
+    male_body_fat = [86.010*Math.log10(waist - neck)] - [70.041 * Math.log10(height)] + 36.76
+  }
+}
+}
