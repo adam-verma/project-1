@@ -26,3 +26,4 @@
   
 };
 
+$("#signup-button").on("click",signup);
