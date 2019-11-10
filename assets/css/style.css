@@ -1,38 +1,74 @@
-
-
-label {
-    font-size: 18px;
-    color: rgb(30, 68, 30);
+body {
+   
+    background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
 }
-
-
-.jumbotron {
-    opacity: 0.6;
-    background-color: rgb(98, 187, 98);
-    color: rgb(30, 68, 30);
-    margin-top: 3%;
+#form-page {
+    background-image: url("../chae/image/brooke-lark-08bOYnH_r_E-unsplash.jpg");
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover;  
+    background-size: cover;
+    background-repeat: no-repeat
 }
-
-.input-form-signin {
-    font-family: 'Be Vietnam', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Mansalva', cursive;
-    font-family: 'Catamaran', sans-serif;
+#form-input {
+    text-align: center;
+}
+#form {
     background-color: transparent;
-    padding: 15px;
-    margin: -153% 11% 9% 5%;
-    opacity: 0.9; 
-    z-index: 0;  
+    width: 350px;
+    top: 20%;
+    left: 15%;
+}
+#hand {
+    width: 30%;
+}
+#space {
+    width: 100%;
+}
+#loginForm {
+    background-color: transparent;
+    width: 350px;
+    top: 20%;
+    left: 15%;
+}
+#brand {
+    color: green;
+    font-weight: bolder;
+}
+@media only screen and (max-width:768px) {
+    #form {
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+    }
+    #loginForm {
+
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+    }
+}
+/* font stuff */
+#boldFont {
+    font-weight: bolder;
+}
+#terms {
+    font-size: 13px;
+}
+#brand {
+    font-size: 30px;
+}
+#button {
+    background-color: #479E57;
 }
 
-.input-form-question {
-    font-family: 'Be Vietnam', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Mansalva', cursive;
-    font-family: 'Catamaran', sans-serif;
-    background-color: transparent;
-    padding: 15px;
-    margin-top: 2%;
+
+#submit-question {
+    background: rgb(50, 119, 50);
+    border: 2px solid rgb(35, 109, 35);
 }
 
 .navbar-input{
@@ -51,56 +87,3 @@ label {
     background: rgb(50, 119, 50);
     border: 2px solid rgb(35, 109, 35);
   }
-/* 
-  .form-check-label .form-check-input {
-    font-size: 18px;
-    margin-right: 4px;
-  } */
-
-#signin-page {
-    background-image: url("../images/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover;
-    background-repeat: no-repeat
-}
-
-#form-page {
-    background-image: url("../images/brooke-lark-08bOYnH_r_E-unsplash.jpg");
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover;  
-    background-size: cover;
-    background-repeat: no-repeat
-}
-
-#main-page {
-    background-image: url("../images/assorted-fruits-on-white-surface-775031.jpg");
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover;  
-    background-size: cover;
-    background-repeat: no-repeat
-}
- 
-#form-image {
-
-    border: none;
-    background-color: transparent;
-    margin: 4% 1% 8% 1%;
-    opacity: 0.8;  
-    position: relative;
-}
-
-#submit-form {
-    background: rgb(50, 119, 50);
-    border: 2px solid rgb(35, 109, 35);
-}
-
-#submit-question {
-    background: rgb(50, 119, 50);
-    border: 2px solid rgb(35, 109, 35);
-}
-
-
