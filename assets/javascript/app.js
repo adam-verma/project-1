@@ -9,4 +9,20 @@
     appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
     measurementId: "G-KYQ1YX7K38"
   };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+
+     function signup () {
+      let email = $("#userEmail").val().trim();
+      let password = $("#password").val().trim();
+      
+     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorMessage)
+    // ...
+  });
+  
+};
 
