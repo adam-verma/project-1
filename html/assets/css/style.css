@@ -29,8 +29,6 @@
 
 
 
-
-
 /* images resizing starts here */
 #ad-1 {
   width: 100%;
@@ -233,4 +231,13 @@
 /* mealprep page cursors starts here */
 .carousel-images {
   cursor: default;
+}
+
+/* adding css to food recipe page */
+
+#more-buttons {
+    padding: 12px;
+    margin: 8px 8px 8px 8px;
+    font-size: 15px;
+    background-color:  #ff8c00;
 }

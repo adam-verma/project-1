@@ -12,6 +12,71 @@ const firebaseConfig = {
      // Initialize Firebase
      firebase.initializeApp(firebaseConfig);
      const auth = firebase.auth();
+   
+
+   
+    ////// register 
+    function signup () {
+       let email = $("#signup-email").val().trim();
+       let password = $("#signup-password").val().trim();
+     auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+       const errorCode = error.code;
+       const errorMessage = error.message;
+      //  console.log(errorMessage)
+        if (errorMessage) {
+          console.log(errorMessage)
+            
+            $(".message-signup").html("<strong>try again! (error)</strong>"+ errorMessage)
+    
+          }
+          else {
+            $(".message-signup").html("<strong>Welcome to NUTRIFIT !</strong>")
+          }
+      });
+  };
+  $("#signup-button").on("click",signup);
+
+  // login part
+
+   $("#login-form").on("click", function(event) {
+   
+     event.preventDefault();
+    let email = $("#userEmail-signin").val().trim();
+    let password = $("#password-signin").val().trim();
+    
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        if (errorMessage === '') {
+
+          $(".message-signup").html("<strong>try again! (error)</strong>"+ errorMessage)
+         
+        }
+        else {
+
+          $("#login-button").on("click", function(event){
+            event.preventDefault;
+          })
+        }
+        $(document).on("click", "#login-button", function(){
+          var instance = M.Modal.getInstance(elem);
+           instance.close();
+      });
+
+  });
+
+ });
+
+
+// //init Modals
+$(document).on("click", "#login-button", function(event){
+    event.preventDefault();
+    $('.modal-login').modal();
+    console.log("Button Clicked")
+    $('#login-form').submit() 
+  });
 
 
     //  function signup () {
@@ -25,83 +90,31 @@ const firebaseConfig = {
 
     //  };
     //  $("#signup-button").on("click",signup);
-   
 
-    ///////////////which one is better and what is the diffrent ? 
-    //////they both creating account but also i wanna make an account and show one text that if the sucssesfuly log in or there is an error
-   
-    ////// register 
-    function signup () {
-       let email = $("#signup-email").val().trim();
-       let password = $("#signup-password").val().trim();
-     auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // Handle Errors here.
-       const errorCode = error.code;
-       const errorMessage = error.message;
-       console.log(errorMessage)
-        if (errorMessage === '') {
-            
-            $(".message-signup").html("<strong>try again! (error)</strong>"+ errorMessage)
-    
-          }
-          else {
-            $(".message-signup").html("<strong>Welcome to NUTRIFIT !</strong>")
-          }
-      });
-  };
-  $("#signup-button").on("click",signup);
+    // login part
+// const loginForm = document.querySelector('#login-form');
+// loginForm.addEventListener('submit', (e) => {
+//   e.preventDefault();
+  
+//   // get user info
+//   const email = loginForm['userEmail-signin'].value;
+//   const password = loginForm['password-signin'].value;
 
-  // $("#login-form").on("click", function(event) {
-   
-//     event.preventDefault();
-//     let email = $("#userEmail-signin").val().trim();
-//     let password = $("#password-signin").val().trim();
-//     auth.signInWithEmailAndPassword(email, password).then((cred) => {
-//         console.log(cred.user);
-//         // close the signup modal & reset form
-//         $(document).on("click", "#login-button", function(){
-//             var instance = M.Modal.getInstance(elem);
-//             instance.close();
-//           });
-
-//           //////////// which one ?
-//         // const modal = document.querySelector('#modal-login');
-//         // M.Modal.getInstance(modal).close();
-
-//        reset();
+//   // log the user in
+//   auth.signInWithEmailAndPassword(email, password).then((cred) => {
+//     console.log(cred.user);
+//     // close the signup modal & reset form
+//     $(document).on("click", "#login-button", function(){
+//                  var instance = M.Modal.getInstance(elem);
+//                   instance.close();
+                
 //   });
+//   loginForm.reset();
+// }); 
 
 // });
 
 
 
-// login part
-const loginForm = document.querySelector('#login-form');
-loginForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  // get user info
-  const email = loginForm['userEmail-signin'].value;
-  const password = loginForm['password-signin'].value;
-
-  // log the user in
-  auth.signInWithEmailAndPassword(email, password).then((cred) => {
-    console.log(cred.user);
-    // close the signup modal & reset form
-    $(document).on("click", "#login-button", function(){
-                 var instance = M.Modal.getInstance(elem);
-                  instance.close();
-                
-  });
-  loginForm.reset();
-}); 
-
-});
-
-// //init Modals
-$(document).on("click", "#login-button", function(event){
-    event.preventDefault();
-    $('.modal-login').modal();
-    console.log("Button Clicked")
-    $('#login-form').submit() 
-  });
+//           //////////// which one ?
+//         // const modal = document.querySelector('#modal-login');
