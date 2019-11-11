@@ -18,12 +18,23 @@
       
      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
     // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
+    const errorCode = error.code;
+    const errorMessage = error.message;
     console.log(errorMessage)
-    // ...
+    if (errorMessage) {
+        
+        $(".message-signup").html("<strong>try again! (error)</strong>"+ errorMessage)
+
+      }
+      else {
+        $(".message-signup").html("<strong>Welcome to NUTRIFIT !</strong>")
+      }
   });
   
 };
 
 $("#signup-button").on("click",signup);
+
+$(document).ready(function(){
+    $('.modal-login').modal();
+  });
