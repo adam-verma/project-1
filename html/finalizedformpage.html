@@ -25,25 +25,24 @@
     </nav>
 
     <!--form body starts here-->
-    <div class="container">
+    <div class="form-body">
         <div class="row mt-5">
             <div class="col-lg-7 col-sm-12 col-md-8"></div>
             <div class="col-lg-5 col-sm-12 col-md-8">
                 <!-- creating form for creating account -->
-                <form class="input-form-question">
+                <form id="health-form">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="gender-input"><strong>Gender</strong></label>
                             <select id="gender-input" class="form-control">
                                 <option selected>Choose...</option>
-                                <option>Female</option>
-                                <option>Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="date of birth-input"><strong>Date Of
-                                    Birth</strong></label>
-                            <input type="date" class="form-control" id="date of birth-input">
+                            <label for="dob-input"><strong>Date Of Birth</strong></label>
+                            <input type="date" class="form-control" id="dob-input">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="blood-input"><strong>Blood Type</strong></label>
@@ -77,11 +76,11 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="hip-input"><strong>Hip</strong></label>
-                            <input type="number" class="form-control" id="hip-input" placeholder="in">
+                            <input type="number" class="form-control" id="Hip" placeholder="in">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="neck-input"><strong>Neck</strong></label>
-                            <input type="number" class="form-control" id="neck-input" placeholder="in">
+                            <input type="number" class="form-control" id="Neck" placeholder="in">
                         </div>
                     </div>
                     <div class="form-row">
@@ -91,12 +90,12 @@
                             <div class="row">
                                 <div class="col-md-1"></div>
                                 <div class="form-check col-md-3">
-                                    <input class="form-check-input" type="checkbox" id="yes-check">
-                                    <label class="form-check-label" for="gridCheck">Yes</label>
+                                    <input class="form-check-input" type="checkbox" id="Yes">
+                                    <label class="form-check-label" for="form-check-input">Yes</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="no-check">
-                                    <label class="form-check-label" for="gridCheck">No</label>
+                                    <input class="form-check-input" type="checkbox" id="No">
+                                    <label class="form-check-label" for="form-check-input">No</label>
                                 </div>
                             </div>
                         </div>
@@ -112,6 +111,35 @@
                             <input type="number" class="form-control" id="target-weight-input" placeholder="lbs">
                         </div>
                     </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="exercise-input"><strong>How many days per week do you work out?</strong></label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-check-exercise meat" value="Do not exercise">
+                            <label class="form-check-label" for="form-check-input">Do not exercise</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-check-exercise meat" value="1-2 days">
+                            <label class="form-check-label" for="form-check-exercise">1-2 days</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-check-exercise exercise-days" value="3-5 days">
+                            <label class="form-check-label" for="form-check-exercise">3-5 days</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-check-exercise exercise-days" value="6-7 days">
+                            <label class="form-check-label" for="form-check-exercise">6-7 days</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-check-exercise exercise-days" value="7 days">
+                            <label class="form-check-label" for="form-check-exercise">7 days</label>
+                        </div>
+                    </div>
+
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="eating-input"><strong>What would you prefer
@@ -125,20 +153,20 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="chiken-Check">
-                            <label class="form-check-label" for="exampleCheck1">Chicken</label>
+                            <input type="checkbox" class="form-check-input meat" value="Chicken">
+                            <label class="form-check-label" for="form-check-input">Chicken</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="salmon-Check">
-                            <label class="form-check-label" for="exampleCheck1">Salmon</label>
+                            <input type="checkbox" class="form-check-input meat" value="Salmon">
+                            <label class="form-check-label" for="form-check-input">Salmon</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Beef-Check">
-                            <label class="form-check-label" for="exampleCheck1">Beef</label>
+                            <input type="checkbox" class="form-check-input meat" value="Beef">
+                            <label class="form-check-label" for="form-check-input">Beef</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Pork-Check">
-                            <label class="form-check-label" for="exampleCheck1">Pork</label>
+                            <input type="checkbox" class="form-check-input meat" value="Pork">
+                            <label class="form-check-label" for="form-check-input">Pork</label>
                         </div>
                     </div>
                     <div class="form-row">
@@ -148,35 +176,35 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Quinoa-Check">
-                            <label class="form-check-label" for="exampleCheck1">Quinoa</label>
+                            <input type="checkbox" class="form-check-input carb" value="Quinoa">
+                            <label class="form-check-label" for="form-check-input">Quinoa</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="White-Rice-Check">
-                            <label class="form-check-label" for="exampleCheck1">White
+                            <input type="checkbox" class="form-check-input carb"value="White Rice">
+                            <label class="form-check-label" for="form-check-input">White
                                 Rice</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Brwon-Rice-Check">
-                            <label class="form-check-label" for="exampleCheck1">Brown
+                            <input type="checkbox" class="form-check-input carb" value="Brown Rice">
+                            <label class="form-check-label" for="form-check-input">Brown
                                 Rice</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Cous-Cous-Check">
-                            <label class="form-check-label" for="exampleCheck1">CousCous</label>
+                            <input type="checkbox" class="form-check-input carb" value="Couscous">
+                            <label class="form-check-label" for="form-check-input">CousCous</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Oats-Check">
-                            <label class="form-check-label" for="exampleCheck1">Oats</label>
+                            <input type="checkbox" class="form-check-input carb" value="Oats">
+                            <label class="form-check-label" for="form-check-input">Oats</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Sweet-Potato-Check">
-                            <label class="form-check-label" for="exampleCheck1">Sweet
+                            <input type="checkbox" class="form-check-input carb" value="Sweet Potato">
+                            <label class="form-check-label" for="form-check-input">Sweet
                                 Potato</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Potato-Check">
-                            <label class="form-check-label" for="exampleCheck1">Potato</label>
+                            <input type="checkbox" class="form-check-input carb" value="Potato">
+                            <label class="form-check-label" for="form-check-input">Potato</label>
                         </div>
                     </div>
                     <div class="form-row">
@@ -185,34 +213,34 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Eggplant-Check">
-                            <label class="form-check-label" for="exampleCheck1">Eggplant</label>
+                        <div class="form-group form-check mr-2 veg">
+                            <input type="checkbox" class="form-check-input" value="Eggplant">
+                            <label class="form-check-label" for="form-check-input">Eggplant</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Spinach-Check">
-                            <label class="form-check-label" for="exampleCheck1">Spinach</label>
+                            <input type="checkbox" class="form-check-input veg" value="Spinach">
+                            <label class="form-check-label" for="form-check-input">Spinach</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Carrot-Check">
-                            <label class="form-check-label" for="exampleCheck1">Carrots</label>
+                            <input type="checkbox" class="form-check-input veg" value="Carrots">
+                            <label class="form-check-label" for="form-check-input">Carrots</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Celery-Check">
-                            <label class="form-check-label" for="exampleCheck1">Celery</label>
+                            <input type="checkbox" class="form-check-input veg" value="Celery">
+                            <label class="form-check-label" for="form-check-input">Celery</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Green-beans-Check">
-                            <label class="form-check-label" for="exampleCheck1">Green
+                            <input type="checkbox" class="form-check-input veg" value="Green Beans">
+                            <label class="form-check-label" for="form-check-input">Green
                                 Beans</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Onion-Potato-Check">
-                            <label class="form-check-label" for="exampleCheck1">Onions</label>
+                            <input type="checkbox" class="form-check-input veg" value="Onions">
+                            <label class="form-check-label" for="form-check-input">Onions</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Squash-Check">
-                            <label class="form-check-label" for="exampleCheck1">Squash</label>
+                            <input type="checkbox" class="form-check-input veg" value="Squash">
+                            <label class="form-check-label" for="form-check-input">Squash</label>
                         </div>
                     </div>
                     <div class="form-row">
@@ -222,43 +250,33 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Almonds-Check">
-                            <label class="form-check-label" for="exampleCheck1">Almonds</label>
+                            <input type="checkbox" class="form-check-input" value="Almonds">
+                            <label class="form-check-label  " for="form-check-input">Almonds</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Avocado-Check">
-                            <label class="form-check-label" for="exampleCheck1">Avocado</label>
+                            <input type="checkbox" class="form-check-input fat" value="Avocado">
+                            <label class="form-check-label" for="form-check-input">Avocado</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="olive-oil-Check">
-                            <label class="form-check-label" for="exampleCheck1">Extra Virgin
+                            <input type="checkbox" class="form-check-input fat" value="Olive-Oil">
+                            <label class="form-check-label" for="form-check-input">Extra Virgin
                                 Olive Oil</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Chia-seed-Check">
-                            <label class="form-check-label" for="exampleCheck1">Chia
-                                Seeds</label>
+                            <input type="checkbox" class="form-check-input fat" value="Chia Seeds">
+                            <label class="form-check-label" for="form-check-input">Chia Seeds</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" id="Coconut-oil-Check">
-                            <label class="form-check-label" for="exampleCheck1">Coconut
-                                Oil</label>
+                            <input type="checkbox" class="form-check-input fat" value="Coconut Oil">
+                            <label class="form-check-label" for="form-check-input">Coconut Oil</label>
                         </div>
                     </div>
-
-
                     <button type="submit" id="submit-question" class="btn btn-success">Continue</button>
-
+                </form>
             </div>
-
-
-            </form>
+            <p id="GFG_DOWN"></p>
         </div>
     </div>
-    </div>
-
-
-
 
 
 
@@ -285,9 +303,45 @@
         </div>
         <img src="assets/images/logo.png" id="logo" />
     </nav>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
+            authDomain: "nutritfit-a2eef.firebaseapp.com",
+            databaseURL: "https://nutritfit-a2eef.firebaseio.com",
+            projectId: "nutritfit-a2eef",
+            storageBucket: "nutritfit-a2eef.appspot.com",
+            messagingSenderId: "646248193448",
+            appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
+            measurementId: "G-KYQ1YX7K38"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="../assets/javascript/app.js"></script>
 </body>
-
-</html>
 
 </html>

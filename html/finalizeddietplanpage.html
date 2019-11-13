@@ -17,7 +17,7 @@
 <body id="diet-plan-page">
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-input">
-        <img src="logo.png" id="logo" />
+        <img src="assets/images/logo.png" id="logo" />
         <a class="navbar-brand" id="brand" href="#">NUTRIFIT</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,30 +52,33 @@
     <!--Diet Plan-->
     <div class="container">
         <div class="row">
-            <div class="col-md-5" id="titles"> IDK ADAM WANTS TO DO SMTHN HERE </div>
+            <div class="col-md-5 personal-eating" id="titles"> Personalized Consumption </div>
             <div class="col-md-1"></div>
-            <div class="col-md-5" id="titles"> FILLER WORDS </div>
+            <div class="col-md-5" id="titles"> Recipe Nutritional Info </div>
 
         </div>
 
         <div class="row">
             <div class="card col-md-5" id="blank">
-                <div class="card" id="cardStock">
-                    <div class="card-body">
-                        filler words
+                <div class="card" id="health-title">
+                    <div class="health-info">
+                        
                     </div>
                 </div>
                 <div class="row mt-3"></div>
-                <div id="titles"> FILLER WORDS </div>
+                <div id="titles"> Recommended Daily Meal Plan </div>
                 <div class="card" id="cardStock">
-                    filler words
+                    <h4 class="breakfast">Breakfast</h4>
+                    
+                    <h4 class="lunch">Lunch</h4>
+
+                    <h4 class="dinner">Dinner</h4>
                 </div>
             </div>
             <div class="col-md-1"></div>
             <div class="card col-md-6">
-                <div class="cardText">
-                    filler words
-
+                <div class="recipe-info-body">
+                    
                 </div>
             </div>
         </div>
@@ -105,6 +108,45 @@
         </div>
         <img src="assets/images/logo.png" id="logo" />
     </nav>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
+            authDomain: "nutritfit-a2eef.firebaseapp.com",
+            databaseURL: "https://nutritfit-a2eef.firebaseio.com",
+            projectId: "nutritfit-a2eef",
+            storageBucket: "nutritfit-a2eef.appspot.com",
+            messagingSenderId: "646248193448",
+            appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
+            measurementId: "G-KYQ1YX7K38"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="../assets/javascript/app.js"></script>
 </body>
 
 
