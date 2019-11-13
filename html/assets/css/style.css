@@ -235,9 +235,35 @@
 
 /* adding css to food recipe page */
 
-#more-buttons {
+
+.video {
+
+    
+    width:300px;
+    height: 300px;
     padding: 12px;
     margin: 8px 8px 8px 8px;
-    font-size: 15px;
-    background-color:  #ff8c00;
+   border: 3px solid rgb(219, 104, 27);
+   border-radius: 20px;
+   
 }
+
+#display-videos {
+
+  border: 1px solid rgb(219, 104, 27);
+  border-radius: 20px;
+  width:100%;
+  height: 1700px;
+  margin-top: 12px;
+}
+
+#search-button {
+  background-color: #ff8c00;
+  font-size: 18px;
+  color: azure;
+}
+
+.card {
+  margin-top: 12px;
+}
+

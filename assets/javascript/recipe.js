@@ -1,60 +1,63 @@
 
 
-// const foods = ["salmon", "chicken", "vegies food", "turkey"];
+
+  $(document).ready(function(){
+
+      //careating on click event for the hole function 
+    $("#search-button").on("click", function(e) {
+      e.preventDefault();
+ const queryURL = `https://www.googleapis.com/youtube/v3/search`;
 
 
-function displayvideos () {
-    // const food = $(food).attr("data-name");
-    const APIKey = "AIzaSyC6r69qVvSp98MRD3JJcud6fxaN20gi6ls";
-    const queryURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${food}&key=${APIKey}`;
-   
-    console.log (queryURL)
-    $.ajax ({
-    url: queryURL,
-    method: "GET"
+// Creating an AJAX call for the specific video button being clicked
+$.ajax({
+  cache: false,
+     data: $.extend({
+         key: 'AIzaSyC6r69qVvSp98MRD3JJcud6fxaN20gi6ls',
+         q: encodeURIComponent($("#search-input").val()),
+         part: 'snippet',
+         type: "video",
+     }, {
+         maxResults: 6,
+     }),
+     dataType: 'json',
+     method: 'GET',
+     timeout: 5000,
+     url: queryURL 
     }).then(function(response) {
 
         $("#display-videos").empty();
-         console.log (queryURL);
-        result = response.items;
-        for(let i=0; i<result.length; i++) {
-
-            const $video = $("<div>").attr("src", result[i].id.videoid)
-             $("#display-videos").append($video);
-      
-           }
-   });
- 
- }
-
-//here we generate function for render buttons
-//   function renderButtons () {
-
-//     $("#buttons-view").empty();
-
-//     for (let i=0; i<foods.length; i++){
+         console.log (response); 
     
-//       const bt = $("<button class = btn btn-warning id = more-buttons>");
-//       bt.addClass ("food");
-//     //   bt.attr("data-name",foods[i])
-//       bt.text (foods[i]);
-//       $("#buttons-view").append(bt);
+         results = response.items;
+         for(let i=0; i<results.length; i++) {
+          //      // creating one input and give that attr
+            const $video = $("<iframe>").attr("src",`https://www.youtube.com/embed/`+results[i].id.videoId)
+           $video.addClass("video");
+            $("#display-videos").append($video);
+            console.log(results)
+         }  
+         resetVideoHeight();
+             });
+              $(window).on("resize", resetVideoHeight);
+           
+            });
 
-//     }
-// };
-
-   // This function handles events where one button is clicked
-  //  $("#add-button").on("click", function(event) {
-
-  //   event.preventDefault();
-  //   const newFood = $("#food-input").val().trim();
-  //   foods.push(newFood);
-  //   renderButtons();
-  // });
+            function resetVideoHeight() {
+              // $(".video").css("height", "20%", "width", "30%");
+          }
+  })
 
 
-   $(document).on("click", ".food", displayvideos)
-  //  renderButtons();
- 
+
+//   var sectionTwoVideos = [
+//     '<iframe src="https://www.youtube.com/embed/j64BBgBGNIU" + width="535" + height="315" + frameborder="0" + allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" + allowfullscreen></iframe>',
+//     '<iframe src="https://www.youtube.com/embed/bl_ZSXldBrU" + width="535" + height="315" + frameborder="0" + allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" + allowfullscreen></iframe>',
+//     '<iframe src="https://www.youtube.com/embed/RE5yzqSXDCI" + width="535" + height="315" + frameborder="0" + allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" + allowfullscreen></iframe>'
+// ];
+
+
+          
+
 
   

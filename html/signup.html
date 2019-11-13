@@ -21,13 +21,15 @@
                                         <label for="userEmail"></label>
                                         <input type="text" class="form-control" id="signup-email" placeholder=" Email">
                                         <label for="fullName"></label>
-                                        <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                                        <input type="text" class="form-control" id="full-Name" placeholder="Full Name">
                                         <label for="password"></label>
                                         <input type="password" class="form-control" id="signup-password" placeholder="Password">
                                     </div>
-                                </form>
+                                  </form>
 
+                                  <!-- showing error to client --> 
                                 <div class="message-signup"></div>
+
                                 <button type="button" class="btn btn-secondary" id="signup-button">Sign Up</button>
                                 <p id="terms">By signing up, you agree to out <span id="boldFont">Terms, Data Policy, and Cookies Policy </span>.</p>
                             </div>
@@ -45,7 +47,7 @@
 
                 <!-- Modal -->
                 <div class="modal fade modal-login" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialogin-closelog" role="document">
+                    <div class="modal-dialog modal-md" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                               <h5 class="modal-title" id="signin-brand">NUTRIFIT</h5>
@@ -61,16 +63,19 @@
                                   <input type="password" class="form-control" id="password-signin" placeholder="Password">
                           </form>
 
+                            <!-- showing error to client --> 
+                            <div class="message-login"></div>
+
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" id="" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary" onclick=`window.location.href="./finalizedhomepage.html"` id="login-button">Login</button>
+                          <button type="reset" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" id="login-button" >Login</button></a>
                         </div>
                       </div>
                     </div>
                   </div>
-
-
+                 
+                  <!-- <a href="./finalizedformpage.html"> -->
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

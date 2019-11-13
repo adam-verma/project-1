@@ -44,7 +44,7 @@
                 <form class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
                   <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="submit">Search</button>
-                  <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="submit">Log Out</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" id="sign-out" type="submit">Log Out</button>
                 </form>
             </div>
         </nav>
@@ -73,7 +73,7 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <a href="#">
-                                            <img src="../html/assets/images/carousel-one.jpg alt="Image" class="carousel-images" style="max-width:100%;">
+                                            <img src="../html/assets/images/carousel-one.jpg" alt="Image" class="carousel-images" style="max-width:100%;">
                                         </a>
                                     </div>
                                     <div class="col-md-3">
@@ -133,40 +133,70 @@
 
       <!-- next section search recipes and videos -->
       <div class="row-top-buffer"></div>
-      <div class="row mt-4">
+      <div class="row mt-5">
           <div class="col-md-5">
-            <form>
-                <div class="form-group">
-                    <input class="form-control col-md-5" type="search" id="food-input" placeholder="Search" aria-label="Search">
-                  <br>
-                    <button type="submit" class="btn btn-warning" id="add-button"><strong>Add Recipes!</strong></button>
-                </div>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search"id="search-input" aria-label="Search">
+              <button class="btn btn-warning my-2 my-sm-0" type="submit"id="search-button" >Search</button>
             </form>
           </div>
 
-          <div class="col-md-2"></div>
+          <div class="col-md-5" id="titles">Recommended Videos Recipes</div>
 
-        <div class="col-md-5" id="titles"> Recommended Videos Recipes</div>
+          <div class="col-md-2"> </div>
 
       </div>
 
       <div class="row">
-        <!--Displaying Buttons-->
-          <div class="col-md-4" id="buttons-view"></div>
-          
-          <div class="col-md-1"></div>
-
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12 mt-4">
+                  <div class="card" style="width: 18rem;">
+                      <img src="./assets/images/smoothie.jpg" class="card-img-top" alt="smoothies">
+                          <div class="card-body">
+                             <h5 class="card-title">Making Healthy Smoothies!</h5>
+                             <p class="card-text">From green smoothie recipes to a basic strawberry smoothie, we’ve got all the smoothie inspiration you need right here!</p>
+                             <a href="https://fitfoodiefinds.com/100-healthy-smoothie-recipes/" class="card-link">To see more just click here</a>
+                          </div>
+               </div>
+               <div class="card" style="width: 18rem;">
+                  <img src="./assets/images/protein-bar.jpg" class="card-img-top" alt="smoothies">
+                      <div class="card-body">
+                         <h5 class="card-title">The 5 Healthiest Protein Bars!</h5>
+                         <p class="card-text">Protein bars are everywhere, calling out to you from next to the cash register at every deli, cafe, and drugstore. The healthiest protein bars, however, are much harder to find.</p>
+                         <a href="https://nutritiouslife.com/eat-empowered/healthiest-protein-bars/slide/primal-kitchen-dark-chocolate-almond/" class="card-link">To see more just click here</a>
+                      </div>
+           </div>
+           <div class="card" style="width: 18rem;">
+              <img src="./assets/images/hangry.jpg" class="card-img-top" alt="smoothies">
+                  <div class="card-body">
+                     <h5 class="card-title">Hangry = Hungry + angry!</h5>
+                     <p class="card-text">When I first heard a friend use the word “hangry” several years ago with a group of friends, I marveled at its accuracy.</p>
+                     <a href="https://www.nbcnews.com/better/pop-culture/science-behind-being-hangry-ncna887806" class="card-link">To see more just click here</a>
+                  </div>
+          </div>
+          <div class="card" style="width: 18rem; mb-10">
+            <img src="./assets/images/over eating 2.jpg" class="card-img-top" alt="smoothies">
+                <div class="card-body">
+                  <h5 class="card-title">Stress Eating ....</h5>
+                  <p class="card-text">How to relieve stress without overeating.</p>
+                  <a href="https://www.health.harvard.edu/staying-healthy/why-stress-causes-people-to-overeat" class="card-link">To see more just click here</a>
+                </div>
+          </div>    
+              </div>
+            </div>
+          </div>
           <!--Displaying Videos-->
-          <div class="col-md-7" id="display-videos"></div>
+          <div class="col-md-8" id="display-videos"></div>
+         </div>
       </div>
-
   </div>
 
 
 
 
   <!--fixed bottom footer-->
-  <nav class="navbar-bottom navbar-expand-lg navbar-light bg-light" id="bottom-navbar">
+  <nav class=" navbar-expand-lg navbar-light bg-light navbar-fixed-bottom" id="bottom-navbar">
     <div class="collapse navbar-collapse" id="bottom-navbar-content">
         <ul class="navbar-nav">
             <li class="nav-item active">
