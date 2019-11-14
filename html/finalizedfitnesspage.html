@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Fitness</title>
+  <!-- CSS File -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--jquery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body id="f">
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-input">
+    <img src="assets/images/logo.png" id="logo" />
+    <a class="navbar-brand" id="brand" href="#">NUTRIFIT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="finalizedhomepage.html">Home</a>
+        </li>
+
+        <a class="nav-link" href="finalizeddietplanpage.html">Diet Plan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="finalizedmealpreppage.html">Meal Prep</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="finalizedfitnesspage.html">Fitness <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="button" id="log-out-button">Log Out</button>
+      </form>
+    </div>
+  </nav>
+
+  <!--header-->
+  <div id="headerContainer">
+    <img src="assets/images/resized.png" id="header" />
+  </div>
+
+  <!--Goals-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5" id="titles"> POWER IT UP </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5" id="titles"> RECOMMENDED FOR YOU </div>
+
+    </div>
+
+    <div class="row">
+      <div class="card col-md-5" id="blank">
+        <div class="card" id="cardStock">
+          <div class="card-body">
+            <span class="cardText" id="section-one">ABS</span>
+            <br>
+            <span class="cardText" id="section-two">ARMS</span>
+            <br>
+            <span class="cardText" id="section-three">BACK</span>
+            <br>
+            <span class="cardText" id="section-four">CARDIO</span>
+            <br>
+            <span class="cardText" id="section-five">CHEST</span>
+            <br>
+            <span class="cardText" id="section-six">GLUTES</span>
+            <br>
+            <span class="cardText" id="section-seven">LEGS</span>
+            <br>
+            <span class="cardText" id="section-eight">SHOULDERS</span>
+            <br>
+
+          </div>
+          <div class="card-extra">
+            <div class="card-body">
+              Pick your inspo 🤩
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3"></div>
+        <div id="titles"> KEEP IT PUMPED </div>
+        <div class="card" id="cardStock">
+          <div class="card-body">
+            <div class="row">
+              <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdxcBWuJkbcy" width="520" height="240"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="row mt-3">
+              <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0HRj9P7NxeE" width="520" height="240"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="card col-md-6">
+        <div class="cardText" id="fitness-section-videos">
+          <iframe width="535" height="315" src="https://www.youtube.com/embed/2pLT-olgUJs" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="535" height="315" src="https://www.youtube.com/embed/rptV4dEJUx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="535" height="315" src="https://www.youtube.com/embed/CSRtn7N0lWI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--next background image-->
+  <div id="second-background-fitness-container">
+    <img src="assets/images/secondfitnessbackground.png" id="second-background-fitness" />
+  </div>
+
+
+
+  <!--fixed bottom footer-->
+  <nav class="navbar-bottom navbar-expand-lg navbar-light bg-light" id="bottom-navbar">
+    <div class="collapse navbar-collapse" id="bottom-navbar-content">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LinkedIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Instagram</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Twitter</a>
+        </li>
+      </ul>
+    </div>
+    <img src="assets/images/logo.png" id="logo" />
+  </nav>
+
+
+
+   <!--javascript file-->
+   <script src="assets/js/fitness.js"></script>
+</body>
+
+
+
+</html>

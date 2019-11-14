@@ -1,0 +1,267 @@
+/* background images start here */
+#login-page {
+  background-image: url("../images/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#form-page {
+  background-image: url("../images/formbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* #meal-prep-page i'm waiting on idk wtf adam wants on that page tbh ?/
+
+
+
+/* navbar style starts here */
+#logo {
+  width: 3%;
+}
+
+#brand {
+  color: green;
+  font-weight: bolder;
+}
+
+
+
+
+
+/* images resizing starts here */
+#ad-1 {
+  width: 100%;
+}
+
+#ad-2 {
+  width: 100%;
+}
+
+
+
+
+/* fonts, color, and styles */
+
+/* home page specific fonts */
+#header-letters {
+  font-size: 100px;
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#ad-content {
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+  line-height: 45px;
+}
+
+#ignore-this {
+  color: white;
+}
+
+#profile-title {
+  font-size: 30px;
+  font-weight: bolder; 
+}
+
+.profile-subtitles {
+  font-size: 20px;
+}
+
+#firebase-weight {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #ff8c00;
+  line-height: 5px;
+}
+
+#firebase-height {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #ff8c00;
+  line-height: 5px;
+}
+
+#firebase-goal-weight {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #ff8c00;
+  line-height: 5px;
+}
+
+
+#boldFont {
+  font-weight: bolder;
+}
+
+#terms {
+  font-size: 13px;
+}
+
+#brand {
+  font-size: 30px;
+}
+
+/*  */
+
+#titles {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #ff8c00;
+}
+
+
+
+
+/* button styles and colors */
+
+#button {
+  background-color: #479e57;
+
+}
+
+/* home page buttons */
+#log-stats-button {
+  background-color: #ff8c00;
+}
+
+
+
+#cardStock {
+  background-color: whitesmoke;
+}
+
+.card-extra {
+  color: white;
+  text-align: center;
+  background-color: #7c7d40;
+}
+
+/* header */
+#headerContainer {
+  width: 100%;
+  height: 100px;
+}
+
+#headerContainer #header {
+  z-index: -1;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+#home-header {
+  z-index: -1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  opacity: .8;
+}
+
+.cardText {
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* fitness page fonts types and colors */
+
+
+#blank {
+  background-color: transparent;
+}
+
+.nav-bar-input {
+  background-color: #479e57;
+}
+
+#second-background-fitness-container {
+  width: 100%;
+  z-index: -1;
+}
+
+#second-background-fitness {
+  position: relative;
+  top: -250px;
+  width: 100%;
+  z-index: -1;
+}
+
+#bottom-navbar {
+  text-align: center;
+}
+
+#bottom-navabar-content {
+  text-align: center;
+}
+
+
+
+/* formatting home page divs */
+#home-profile {
+  background-color: transparent;
+}
+
+#home-center-div {
+  text-align: center;
+}
+
+#top-bottom-only {
+  border-width: 4px;
+  border-color: black;
+  border-left: none;
+  border-right: none;
+
+}
+
+#ad-content {
+  background-color: black;
+}
+
+#ad-main-card {
+  border-color: transparent;
+}
+
+
+
+
+/* carousel format */
+.blog .carousel-indicators {
+  left: 0;
+  top: auto;
+  bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+  background: #a3a3a3;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.blog .carousel-indicators .active {
+  background: #707070;
+}
+
+
+/* setting cursors */
+/* homepage cursors starts here */
+#ad-1 {
+  cursor: pointer;
+}
+
+#ad-2 {
+  cursor: pointer;
+}
+
+/* mealprep page cursors starts here */
+.carousel-images {
+  cursor: default;
+}
