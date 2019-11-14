@@ -41,7 +41,7 @@
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="dob-input"><strong>Date Of Birth</strong></label>
+                            <label for="date-of-birth-input"><strong>Date Of Birth</strong></label>
                             <input type="date" class="form-control" id="dob-input">
                         </div>
                         <div class="form-group col-md-3">
@@ -76,17 +76,16 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="hip-input"><strong>Hip</strong></label>
-                            <input type="number" class="form-control" id="Hip" placeholder="in">
+                            <input type="number" class="form-control" id="hip-input" placeholder="in">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="neck-input"><strong>Neck</strong></label>
-                            <input type="number" class="form-control" id="Neck" placeholder="in">
+                            <input type="number" class="form-control" id="neck-input" placeholder="in">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="waist-input"><strong>Do you have an
-                                    allergy?</strong></label>
+                            <label for="waist-input"><strong>Do you have an allergy?</strong></label>
                             <div class="row">
                                 <div class="col-md-1"></div>
                                 <div class="form-check col-md-3">
@@ -119,24 +118,24 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="radio" class="form-radio-exercise meat" value="Do not exercise">
-                            <label class="form-check-label" for="form-check-input">Do not exercise</label>
+                            <input type="radio" name="form-radio-exercise" value="Do not exercise">
+                            <label class="form-check-label" for="form-radio-exercise">Do not exercise</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="radio" class="form-radio-exercise meat" value="1-2 days">
-                            <label class="form-check-label" for="form-check-exercise">1-2 days</label>
+                            <input type="radio" name="form-radio-exercise" value="1-2 days">
+                            <label class="form-check-label" for="form-radio-exercise">1-2 days</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="radio" class="form-radio-exercise exercise-days" value="3-5 days">
-                            <label class="form-check-label" for="form-check-exercise">3-5 days</label>
+                            <input type="radio" name="form-radio-exercise" value="3-5 days">
+                            <label class="form-check-label" for="form-radio-exercise">3-5 days</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="radio" class="form-radio-exercise exercise-days" value="6-7 days">
-                            <label class="form-check-label" for="form-check-exercise">6-7 days</label>
+                            <input type="radio" name="form-radio-exercise" value="6-7 days">
+                            <label class="form-check-label" for="form-radio-exercise">6-7 days</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="radio" class="form-radio-exercise exercise-days" value="7 days">
-                            <label class="form-check-label" for="form-check-exercise">7 days</label>
+                            <input type="radio" name="form-radio-exercise" value="7 days">
+                            <label class="form-check-label" for="form-radio-exercise">7 days</label>
                         </div>
                     </div>
 
@@ -148,133 +147,112 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="meat-input"><strong>Meat</strong></label>
+                            <label for="meat-input"><strong>Breakfast</strong></label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-row">
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Eggs">
+                            <label class="form-radio-label" for="form-check-input">Eggs</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Bacon">
+                            <label class="form-check-label" for="form-check-input">Bacon</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Sausage">
+                            <label class="form-check-label" for="form-check-input">Sausage</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Pork">
+                            <label class="form-check-label" for="form-check-input">Pork</label>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Oats">
+                            <label class="form-radio-label" for="form-check-input">Oats</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Flaxseed">
+                            <label class="form-check-label" for="form-check-input">Flaxseed</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Whole Grain">
+                            <label class="form-check-label" for="form-check-input">Whole Grain</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Avocado">
+                            <label class="form-check-label" for="form-check-input">Avocado</label>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="meat-input"><strong>Lunch</strong></label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input meat" value="Chicken">
+                            <input type="checkbox" name="lunch-meat" value="Chicken">
                             <label class="form-check-label" for="form-check-input">Chicken</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input meat" value="Salmon">
-                            <label class="form-check-label" for="form-check-input">Salmon</label>
+                            <input type="checkbox" name="lunch-meat"value="Turkey">
+                            <label class="form-check-label" for="form-check-input">Turkey</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input meat" value="Beef">
+                            <input type="checkbox" name="lunch-meat" value="Beef">
                             <label class="form-check-label" for="form-check-input">Beef</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input meat" value="Pork">
-                            <label class="form-check-label" for="form-check-input">Pork</label>
+                            <input type="checkbox" name="lunch-carb" value="Couscous">
+                            <label class="form-check-label" for="form-check-input">Couscous</label>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="meat-input"><strong>Carbs</strong></label>
-                        </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input carb" value="Quinoa">
+                            <input type="checkbox" name="lunch=carb" value="Quinoa">
                             <label class="form-check-label" for="form-check-input">Quinoa</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input carb"value="White Rice">
-                            <label class="form-check-label" for="form-check-input">White
-                                Rice</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input carb" value="Brown Rice">
-                            <label class="form-check-label" for="form-check-input">Brown
-                                Rice</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input carb" value="Couscous">
-                            <label class="form-check-label" for="form-check-input">CousCous</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input carb" value="Oats">
-                            <label class="form-check-label" for="form-check-input">Oats</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input carb" value="Sweet Potato">
-                            <label class="form-check-label" for="form-check-input">Sweet
-                                Potato</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input carb" value="Potato">
-                            <label class="form-check-label" for="form-check-input">Potato</label>
+                            <input type="checkbox" name="lunch-carb" value="Sweet Potato">
+                            <label class="form-check-label" for="form-check-input">Sweet Potato</label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="meat-input"><strong>Veggies</strong></label>
+                            <label for="meat-input"><strong>Dinner</strong></label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2 veg">
-                            <input type="checkbox" class="form-check-input" value="Eggplant">
+                            <input type="checkbox" class="dinner-meat" value="Steak">
                             <label class="form-check-label" for="form-check-input">Eggplant</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input veg" value="Spinach">
+                            <input type="checkbox" name="dinner-meat" value="Tofu">
+                            <label class="form-check-label" for="form-check-input">Tofu</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" name="dinner-meat" value="Salmon">
+                            <label class="form-check-label" for="form-check-input">Salmon</label>
+                        </div>
+                        <div class="form-group form-check mr-2">
+                            <input type="checkbox" name="dinner-supp" value="Spinach">
                             <label class="form-check-label" for="form-check-input">Spinach</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input veg" value="Carrots">
-                            <label class="form-check-label" for="form-check-input">Carrots</label>
+                            <input type="checkbox" name="dinner-supp" value="Green Beans">
+                            <label class="form-check-label" for="form-check-input">Green Beans</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input veg" value="Celery">
-                            <label class="form-check-label" for="form-check-input">Celery</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input veg" value="Green Beans">
-                            <label class="form-check-label" for="form-check-input">Green
-                                Beans</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input veg" value="Onions">
-                            <label class="form-check-label" for="form-check-input">Onions</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input veg" value="Squash">
-                            <label class="form-check-label" for="form-check-input">Squash</label>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="meat-input"><strong>Fats</strong></label>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input" value="Almonds">
-                            <label class="form-check-label  " for="form-check-input">Almonds</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input fat" value="Avocado">
-                            <label class="form-check-label" for="form-check-input">Avocado</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input fat" value="Olive-Oil">
-                            <label class="form-check-label" for="form-check-input">Extra Virgin
-                                Olive Oil</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input fat" value="Chia Seeds">
-                            <label class="form-check-label" for="form-check-input">Chia Seeds</label>
-                        </div>
-                        <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-check-input fat" value="Coconut Oil">
-                            <label class="form-check-label" for="form-check-input">Coconut Oil</label>
+                            <input type="checkbox" name="dinner-supp" value="Asparagus">
+                            <label class="form-check-label" for="form-check-input">Asparagus</label>
                         </div>
                     </div>
                     <button type="submit" id="submit-question" class="btn btn-success">Continue</button>
                 </form>
             </div>
-            <p id="GFG_DOWN"></p>
         </div>
     </div>
 
@@ -334,7 +312,7 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
             projectId: "nutritfit-a2eef",
             storageBucket: "nutritfit-a2eef.appspot.com",
             messagingSenderId: "646248193448",
-            appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
+            appId: "1:646248193448:web:199e0f3fc21f1ec13f519d", 
             measurementId: "G-KYQ1YX7K38"
         };
         // Initialize Firebase
