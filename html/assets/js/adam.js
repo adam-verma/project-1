@@ -57,7 +57,7 @@
   // // This function handles events where a foodGroupItem box is checked
   $("#submit-question").on("click", function (event) {
     event.preventDefault();
-    userFoodPref = []
+    const userFoodPref = []
     $('input:checkbox:checked').each(function () {
       userFoodPref.push($(this).val());
     });
@@ -66,80 +66,98 @@
 
     // Create a function that performs an API call for the BMR 
 
-      userShape.height = parseInt($('#height-input').val());
-      userShape.weight = parseInt($('#weight-input').val());
-      userShape.target_weight = parseInt($('#target-weight-input').val());
-      goal_weight_diff = userShape.weight - userShape.target_weight;
-      dob = $('#dob-input').val();
-      userShape.age = Math.abs(moment().diff(dob, 'years'));
-      userShape.gender = toString($('#gender-input').val());
-
-      for (let i = 0; i < userShape.types.length; i++) {
-        const typeDiet = userShape.types[i].diet;
+    userShape.height = parseInt($('#height-input').val());
+    userShape.weight = parseInt($('#weight-input').val());
+    userShape.target_weight = parseInt($('#target-weight-input').val());
+    const goal_weight_diff = userShape.weight - userShape.target_weight;
+    const dob = $('#dob-input').val();
+    userShape.age = Math.abs(moment().diff(dob, 'years'));
+    userShape.gender = $('#gender-input').val().toString();
+    let bmr, daily_intake_cals;
+    for (let i = 0;  i < userShape.types.length; i++) {
+        const typeDiet = userShape.diet[i].diet;
         const typeId = userShape.types[i].id;
         const typeActivity = userShape.types[i].activity_factor;
-        let userExercise = $('.form-check-exercise').val()
+        if ($('.form-radio.exercise').checked) {
+          const userExercise = $('.form-radio-exercise').val()
+          if (userShape.gender === "Male") {
+            let bmr = 655 + (4.35 * userShape.weight) + (4.7 * userShape.height) - (4.7 * userShape.age);
+            if (userExercise === "Do not exercise") {
+              typeActivity = 1.1;
+              let daily_intake_cals = parseFloat(bmr * typeActivity);
+            } else if (userExercise === "1-2 days") {
+              typeActivity = 1.2;
+              let daily_intake_cals = parseFloat(bmr * typeActivity);
+            } else if (userExercise === "3-5 days") {
+              typeActivity = 1.35;
+              let daily_intake_cals = parseFloat(bmr * typeActivity);
+            } else if (userExercise === "6-7 days") {
+              typeActivity = 1.725;
+              let daily_intake_cals = parseFloat(bmr * typeActivity);
+            } else if (userExercise === "7 days") {
+              typeActivity = 1.9;
+              let daily_intake_cals = parseFloat(bmr * typeActivity);
+            }
+          } else {
+            let bmr = 66 + (6.23 * userShape.weight) + (12.7 * userShape.height) - (6.8 * userShape.age);
+            daily_intake_cals = parseFloat(bmr * typeActivity);
+            if (userExercise === "Do not exercise") {
 
-          if (userExercise === "Do not exercise") {
-            
-          }
-          else if (userExercise === "1-2 days") {
-            
-          }
-          else if (userExercise === "3-5 days") {
-           
-          }
-          else if (userExercise === "6-7 days") {
-            
-          }
-          else if (userExercise === "7 days") {
-            
+            } else if (userExercise === "1-2 days") {
+
+            } else if (userExercise === "3-5 days") {
+
+            } else if (userExercise === "6-7 days") {
+
+            } else if (userExercise === "7 days") {
+
+            }
           }
         }
-      
 
-      let bmr, daily_intake_cals
-      if (userShape.gender === "Male") {
-        bmr = 655 + (4.35 * userShape.weight) + (4.7 * userShape.height) - (4.7 * userShape.age);
-        daily_intake_cals = parseFloat(bmr * typeActivity);
-      } else {
-        bmr = 66 + (6.23 * userShape.weight) + (12.7 * userShape.height) - (6.8 * userShape.age);
-        daily_intake_cals = parseFloat(bmr * typeActivity);
-      } 
-      
-    
-      const bmi = parseFloat((userShape.weight / (userShape.height * userShape.height)) * 703).toFixed(1);
+        const bmi = parseFloat((userShape.weight / (userShape.height * userShape.height)) * 703).toFixed(1);
 
-      if (bmi < 18.5) {
-        typeId = 'underweight'
-      } else if (bmi >= 18.5) {
-        typeId = 'active'
-      } else if (bmi >= 25) {
-        typeId = 'sedentary'
-      } else if (bmi >= 30) {
-        typeId = 'overweight'
-      } else if (bmi >= 35) {
-        typeId = 'obese'
+        if (bmi < 18.5) {
+          typeId = 'athletic';
+          let bmiEl = $('<p>').text(`Currently, based on your Body Mass Index of ${bmi} you are a(n) ${typeId} type`);
+          bodyTypeDiv = $('.health-info').append(bmiEl);
+        } else if (bmi >= 18.5) {
+          typeId = 'active';
+          let bmiEl = $('<p>').text(`Currently, based on your Body Mass Index of ${bmi} you are a(n) ${typeId} type`);
+          bodyTypeDiv = $('.health-info').append(bmiEl);
+        } else if (bmi >= 25) {
+          typeId = 'sedentary';
+          let bmiEl = $('<p>').text(`Currently, based on your Body Mass Index of ${bmi} you are a(n) ${typeId} type`);
+          bodyTypeDiv = $('.health-info').append(bmiEl);
+        } else if (bmi >= 30) {
+          typeId = 'overweight';
+          let bmiEl = $('<p>').text(`Currently, based on your Body Mass Index of ${bmi} you are a(n) ${typeId} type`);
+          bodyTypeDiv = $('.health-info').append(bmiEl);
+        } else if (bmi >= 35) {
+          typeId = 'obese';
+          let bmiEl = $('<p>').text(`Currently, based on your Body Mass Index of ${bmi} you are a(n) ${typeId} type`);
+          bodyTypeDiv = $('.health-info').append(bmiEl);
+        }
+
+        const female_body_fat = (163.205 * Math.log10(userShape.hip + userShape.hip - userShape.neck)) - (97.684 * Math.log10(userShape.height)) - 78.387
+        const male_body_fat = (86.010 * Math.log10(userShape.waist - userShape.neck)) - (70.041 * Math.log10(userShape.height)) + 36.76
+
+        if (userShape.gender === 'Female') {
+          let fatEl = $('<p>').text(`${female_body_fat}%`);
+          bodyfatDiv = $("<div class= 'body-fat'>").append(fatEl);
+          $('.health-info').append(bodyfatDiv);
+        } else if (userShape.gender === 'Male') {
+          let fatEl = $('<p>').text(`${male_body_fat}%`);
+          bodyfatDiv = $("<div class= 'body-fat'>").append(fatEl);
+          $('.health-info').append(bodyfatDiv);
+        }
       }
-
-      const female_body_fat = (163.205 * Math.log10(userShape.hip + userShape.hip - userShape.neck)) - (97.684 * Math.log10(userShape.height)) - 78.387
-      const male_body_fat = (86.010 * Math.log10(userShape.waist - userShape.neck)) - (70.041 * Math.log10(userShape.height)) + 36.76
-
-      if (userShape.gender === 'Female') {
-        let fatEl = $('<p>').text(`${female_body_fat}%`);
-        bodyfatDiv = $("<div class= 'body-fat'>").append(fatEl);
-        $('.health-info').append('.body-fat');
-      } else if (userShape.gender === 'Male') {
-        let fatEl = $('<p>').text(`${male_body_fat}%`);
-        bodyfatDiv = $("<div class= 'body-fat'>").append(fatEl);
-        $('.health-info').append('.body-fat');
-      }
-      displayNutritionInfo(typeDiet, daily_intake_cals)
-    });
+    displayNutritionInfo(typeDiet, daily_intake_cals)
+  });
 
   // displayNutritionInfo function re-renders the HTML to display the appropriate content
   function displayNutritionInfo(typeDiet, foodGroupItem, daily_intake_cals) {
-    console.log(typeDiet, daily_intake_cals);  
+    console.log(typeDiet, daily_intake_cals);
     const queryURL =
       `https://api.edamam.com/search?q=${foodGroupItem}&diet=${typeDiet}&app_id=72b0f0df`;
 
@@ -160,26 +178,30 @@
         const carb = parseInt(results[i].recipe.totalNutrients.CHOCDF * single_serving) + "g";
         const protein = parseInt(results[i].recipe.totalNutrients.FAT * single_serving) + "g";
         const calories = parseInt(results[i].recipe.calories * single_serving);
-        
         const recipeImgURL = results[i].recipe.image;
-        
-        // Creating an element to have the label, calories, image displayed
 
-        const labEl = $("<p>").text(label);
-        const caloriesEl = $("<p>").text(calories);
-        const fatEl = $("<p>").text(fat);
+        // Compare daily intake to calories per recipe 
+        if (daily_intake_cals < calories) {
 
-        const img = $("<img>").attr("src", recipeImgURL).addClass("recipeImage");
 
-        // Retrieving the image for the 
-        dietChoiceButton.append(labEl, caloriesEl, fatEl, img);
+          // Creating an element to have the label, calories, image displayed
 
-        // Putting the entire gif above the previous gifs
-        $("#breakfast").append(dietChoiceButton);
+          const labEl = $("<p>").text(label);
+          const caloriesEl = $("<p>").text(calories);
+          const fatEl = $("<p>").text(fat);
 
-        $(".diet").on("click", function (e) {
+          const img = $("<img>").attr("src", recipeImgURL).addClass("recipeImage");
 
-        });
+          // Retrieving the image for the 
+          dietChoiceButton.append(labEl, caloriesEl, fatEl, img);
+
+          // Putting the entire gif above the previous gifs
+          $("#breakfast").append(dietChoiceButton);
+
+          $(".diet").on("click", function (e) {
+
+          });
+        }
       }
     });
   };
