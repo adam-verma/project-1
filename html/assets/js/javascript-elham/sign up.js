@@ -63,7 +63,7 @@ function login () {
     auth.onAuthStateChanged(function(user) {
       if (user) {
        console.log(user)
-      window.location = "./finalizedformpage.html"
+      window.location = "./finalizedhomepage.html"
       
       } else {
       
@@ -94,35 +94,63 @@ $(document).on("click", "#login-button", function(event){
 
  
   //signout
-  function signout(){ 
-    auth.signOut()
-    .then(function() {
+  function signout(){
 
-      auth.onAuthStateChanged(function(user) {
-        if (user) {
-         console.log(user)
-         console.log("user is log out")
-        window.location = "./signup.html"
-        
-        } else {
-        
-        }
-      // Sign-out successful.
-     
-    }).catch(function(error) {
-      // An error happened.
+    auth.signOut().then(function() {
+      console.log('Signed Out');
+    }, function(error) {
+      console.error('Sign Out Error', error);
     });
-  });
 }
  
   $("#signup-button").on("click",signup);
-  $("#logout-button").on("click",signout);
 
+  $("#logout-button").on("click",signout);
 
   $('#close').on('click', function(e){
     console.log("hello")
     $('.modal-login').modal('toggle')
 
   })
+
+//   //recipe page start from here 
+$("#search-button").on("click", function(e) {
+  e.preventDefault();
+const queryURL = `https://www.googleapis.com/youtube/v3/search`;
+
+
+// Creating an AJAX call for the specific video button being clicked
+$.ajax({
+cache: false,
+ data: $.extend({
+     key: 'AIzaSyC6r69qVvSp98MRD3JJcud6fxaN20gi6ls',
+     q: encodeURIComponent($("#search-input").val()).replace(/%20/g, "+"),
+     kind: "youtube#videoCategoryListResponse",
+     part: 'snippet',
+     type: "video",
+ }, {
+     maxResults: 6,
+ }),
+ dataType: 'json',
+ method: 'GET',
+ timeout: 5000,
+ url: queryURL 
+}).then(function(response) {
+
+    $("#display-videos").empty();
+     console.log (response); 
+
+     results = response.items;
+     for(let i=0; i<results.length; i++) {
+      //      // creating one input and give that attr
+        const $video = $("<iframe>").attr("src",`https://www.youtube.com/embed/`+results[i].id.videoId)
+       $video.addClass("video");
+        $("#display-videos").append($video);
+        console.log(results)
+     }  
+
+         });
+         
+        });
 
 
