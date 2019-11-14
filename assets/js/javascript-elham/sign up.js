@@ -63,7 +63,7 @@ function login () {
     auth.onAuthStateChanged(function(user) {
       if (user) {
        console.log(user)
-      window.location = "./finalizedhomepage.html"
+      window.location = "./finalizedformpage.html"
       
       } else {
       
