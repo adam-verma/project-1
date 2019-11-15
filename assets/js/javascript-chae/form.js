@@ -1,19 +1,8 @@
-//F I R E B A S E ---------------------------
-//setting up the basics for firebase usage 
-var firebaseConfig = {
-    apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
-    authDomain: "nutritfit-a2eef.firebaseapp.com",
-    databaseURL: "https://nutritfit-a2eef.firebaseio.com",
-    projectId: "nutritfit-a2eef",
-    storageBucket: "nutritfit-a2eef.appspot.com",
-    messagingSenderId: "646248193448",
-    appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
-    measurementId: "G-KYQ1YX7K38"
-  };
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
-const database = firebase.database();
+//setting up the basics for firebase usage 
+
+
+const data_base = firebase.database();
 
 //   setting the variables to get for the homepage 
 
@@ -207,7 +196,7 @@ $("#continue-button").on("click", function () {
 
 
 
-    database.ref().push({
+    data_base.ref().push({
         genderUser: userGender,
         dateOfBirthUser: userDateOfBirth,
         bloodTypeUser: userBloodType,
