@@ -80,7 +80,6 @@ $("#submit-question").on("click", function (event) {
   userShape.age = Math.abs(moment().diff(dob, 'years'));
   userShape.gender = $('#gender-input').val().toString();
   const userExercise = $('input[name="form-radio-exercise"]:checked').val();
-  console.log(userShape.gender)
   let bmr, body_fat, daily_intake_cals, typeDiet, typeId, mealType;
 
   if (userShape.gender === 'Male') {
@@ -139,7 +138,6 @@ $("#submit-question").on("click", function (event) {
 });
 
 // Create global variables of user info references
-const database = firebase.database();
 const user = firebase.auth().currentUser;
 console.log(user);
 function writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeDiet, typeDiet) {
