@@ -5,18 +5,13 @@
   <meta charset="UTF-8" />
   <title>Meal Prep</title>
   <!-- CSS File -->
-  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
   <!-- Bootstrap File -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--jquery-->
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <!--firebase  links-->
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
 
 </head>
 
@@ -24,7 +19,9 @@
 <body id="meal-prep-page">
   <!--navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-input">
-    <img src="assets/images/logo.png" id="logo" />
+
+    <img src="./assets/images/logo.png" id="logo" />
+
     <a class="navbar-brand" id="brand" href="#">NUTRIFIT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +55,9 @@
 
   <!--header-->
   <div id="headerContainer">
-    <img src="assets/images/mealprepbackground.jpg" id="header" />
+
+    <img src="./assets/images/back.jpg" id="header" />
+
   </div>
 
   <!--main cards-->
@@ -80,25 +79,33 @@
               <div class="row">
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-one.jpg" alt="Image" class="carousel-images"
+
+                    <img src="./assets/images/carousel-one.jpg" alt="Image" class="carousel-images"
+
                       style="max-width:100%;">
                   </a>
                 </div>
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-two.jpg" alt="Image" class="carousel-images"
+
+                    <img src="./assets/images/carousel-two.jpg" alt="Image" class="carousel-images"
+
                       style="max-width:100%;">
                   </a>
                 </div>
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-three.jpg" alt="Image" class="carousel-images"
+
+                    <img src="./assets/images/carousel-three.jpg" alt="Image" class="carousel-images"
+
                       style="max-width:100%;">
                   </a>
                 </div>
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-four.jpg" alt="Image" class="carousel-images"
+
+                    <img src="./assets/images/carousel-four.jpg" alt="Image" class="carousel-images"
+
                       style="max-width:100%;">
                   </a>
                 </div>
@@ -111,22 +118,30 @@
               <div class="row">
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-five.jpg" alt="Image" style="max-width:100%;">
+
+                    <img src="./assets/images/carousel-five.jpg" alt="Image" style="max-width:100%;">
+
                   </a>
                 </div>
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-six.jpg" alt="Image" style="max-width:100%;">
+
+                    <img src="./assets/images/carousel-six.jpg" alt="Image" style="max-width:100%;">
+
                   </a>
                 </div>
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-seven.jpg" alt="Image" style="max-width:100%;">
+
+                    <img src="./assets/images/carousel-seven.jpg" alt="Image" style="max-width:100%;">
+
                   </a>
                 </div>
                 <div class="col-md-3">
                   <a href="#">
-                    <img src="assets/images/carousel-eight.jpg" alt="Image" style="max-width:100%;">
+
+                    <img src="./assets/images/carousel-eight.jpg" alt="Image" style="max-width:100%;">
+
                   </a>
                 </div>
               </div>
@@ -156,11 +171,40 @@
         <div class="card" id="cardStock">
           <div class="card-body">
 
+            Option 1
+            <br>
+            Option 2
+            <br>
+            Option 3
+            <br>
+            Option 4
+            <br>
+            Option 5
+            <br>
+
           </div>
           <div class="card">
             <div class="card-body">
               What's on the menu today?
             </div>
+          </div>
+        </div>
+
+        <div class="row mt-3"></div>
+        <div id="titles"> Our Daily Recipe </div>
+        <div class="card" id="cardStock">
+          <div class="card-body">
+            <span class="cardText">Salmon Eggs Benedict</span>
+            <br>
+            Eggs
+            <br>
+            Rye bread
+            <br>
+            Capers
+            <br>
+            Parsley
+            <br>
+            Salmon
           </div>
         </div>
 
@@ -178,11 +222,10 @@
   </div>
 
 
-
-
   <!--fixed bottom footer-->
-  <nav class="navbar-fixed-bottom navbar-expand-lg navbar-light bg-light" id="bottom-navbar">
-    <div class="navbar-fixed-bottom" id="bottom-navbar-content">
+  <nav class="navbar-bottom navbar-expand-lg navbar-light bg-light" id="bottom-navbar">
+    <div class="collapse navbar-collapse" id="bottom-navbar-content">
+
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
@@ -201,12 +244,18 @@
         </li>
       </ul>
     </div>
-    <img src="assets/images/logo.png" id="logo" />
+
+    <img src="./assets/images/logo.png" id="logo"/>
   </nav>
 
-
-
-
+  <!--javascript file-->
+  <script src="./assets/js/javascript-adam/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!--jquery-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 </body>
 
