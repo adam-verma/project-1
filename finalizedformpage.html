@@ -13,29 +13,38 @@
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+   <!-- google charts -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <!--charts-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
 </head>
 
 <body id="form-page">
 
     <!--navbar starts here-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-input">
+
         <img src="./assets/images/logo.png" alt="logo" id="logo" />
+
         <a class="navbar-brand" id="brand" href="#">NUTRIFIT</a>
         </div>
     </nav>
 
     <!--form body starts here-->
+
     <div class="form-body">
         <div class="row mt-5">
             <div class="col-lg-7 col-sm-12 col-md-8"></div>
             <div class="col-lg-5 col-sm-12 col-md-8">
                 <!-- creating form for creating account -->
+
                 <form id="health-form">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="gender-input"><strong>Gender</strong></label>
                             <select id="gender-input" class="form-control">
                                 <option selected>Choose...</option>
+
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                             </select>
@@ -43,6 +52,7 @@
                         <div class="form-group col-md-6">
                             <label for="date-of-birth-input"><strong>Date Of Birth</strong></label>
                             <input type="date" class="form-control" id="dob-input">
+
                         </div>
                         <div class="form-group col-md-3">
                             <label for="blood-input"><strong>Blood Type</strong></label>
@@ -85,16 +95,19 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="waist-input"><strong>Do you have an allergy?</strong></label>
+
+                            <label for="waist-input"><strong>Do you have an
+                                    allergy?</strong></label>
                             <div class="row">
                                 <div class="col-md-1"></div>
                                 <div class="form-check col-md-3">
-                                    <input class="form-check-input" type="checkbox" id="Yes">
-                                    <label class="form-check-label" for="form-check-input">Yes</label>
-                                </div>  
+                                    <input class="form-check-input" type="checkbox" id="yes-check">
+                                    <label class="form-check-label" for="yes-check">Yes</label>
+                                </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="No">
-                                    <label class="form-check-label" for="form-check-input">No</label>
+                                    <input class="form-check-input" type="checkbox" id="no-check">
+                                    <label class="form-check-label" for="no-check">No</label>
+
                                 </div>
                             </div>
                         </div>
@@ -190,11 +203,13 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
+
                             <label for="meat-input"><strong>Lunch</strong></label>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2">
+                          
                             <input type="checkbox" name="lunch-meat" value="Chicken">
                             <label class="form-check-label" for="form-check-input">Chicken</label>
                         </div>
@@ -277,6 +292,7 @@
                 </li>
             </ul>
         </div>
+
         <img src="./assets/images/logo.png" id="logo" />
     </nav>
     <!-- JavaScript -->
@@ -321,6 +337,8 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
         firebase.analytics();
     </script>
     <script src="./assets/js/javascript-adam/app.js"></script>
+    <!-- javascript file goes here -->
+    <script src="assets/js/javascript-chae/form.js"></script>
 </body>
 
 </html>
