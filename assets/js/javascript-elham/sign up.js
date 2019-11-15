@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
     apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
     authDomain: "nutritfit-a2eef.firebaseapp.com",
@@ -8,7 +9,7 @@ const firebaseConfig = {
     appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
     measurementId: "G-KYQ1YX7K38"
   };
-
+  $(document).ready(function(){
      // Initialize Firebase
      firebase.initializeApp(firebaseConfig);
      const auth = firebase.auth();
@@ -97,18 +98,21 @@ $(document).on("click", "#login-button", function(event){
   function signout(){
 
     auth.signOut().then(function() {
+        window.location = "./index.html"
       console.log('Signed Out');
-    }, function(error) {
-      console.error('Sign Out Error', error);
-    });
-}
+    
+})
+.catch(function(error){
+  console.log(error)
+})
+  }
  
   $("#signup-button").on("click",signup);
 
   $("#logout-button").on("click",signout);
 
   $('#close').on('click', function(e){
-    console.log("hello")
+
     $('.modal-login').modal('toggle')
 
   })
@@ -145,12 +149,14 @@ cache: false,
       //      // creating one input and give that attr
         const $video = $("<iframe>").attr("src",`https://www.youtube.com/embed/`+results[i].id.videoId)
        $video.addClass("video");
+       $("#display-videos").append(`<h2> ${results[i].snippet.title}</h2>`)
         $("#display-videos").append($video);
-        console.log(results)
+        
      }  
 
          });
          
         });
+      })
 
 
