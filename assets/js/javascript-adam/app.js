@@ -57,15 +57,12 @@ $("#submit-question").on("click", function (event) {
 
   breakfastMeat = $('input[name="breakfast-meat"]:checked').val().replace(" ", "%20");
   breakfastSupp = $('input[name="breakfast-supp"]:checked').val().replace(" ", "%20");
-  console.log(breakfastMeat, breakfastSupp)
   breakfast = `${breakfastMeat}%20${breakfastSupp}`
   lunchMeat = $('input[name="lunch-meat"]:checked').val().replace(" ", "%20");
   lunchSupp = $('input[name="lunch-supp"]:checked').val().replace(" ", "%20");
-  console.log(lunchMeat, lunchSupp)
   lunch = `${lunchMeat}%20${lunchSupp}`
   dinnerMeat = $('input[name="dinner-meat"]:checked').val().replace(" ", "%20");
   dinnerSupp = $('input[name="dinner-supp"]:checked').val().replace(" ", "%20");
-  console.log(dinnerMeat, dinnerSupp);
   dinner = `${dinnerMeat}%20${dinnerSupp}`
 
   // Write variables pertaining to values from HTML selectors 
