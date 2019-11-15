@@ -11,7 +11,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-<<<<<<< HEAD
 }
 
 /* #meal-prep-page i'm waiting on idk wtf adam wants on that page tbh ?/
@@ -23,7 +22,6 @@
   width: 3%;
 }
 
-=======
 }
 
 /*css for sign up page */
@@ -52,13 +50,11 @@
   left: 15%;
 }
 
->>>>>>> elham
 #brand {
   color: green;
   font-weight: bolder;
 }
 
-<<<<<<< HEAD
 
 
 
@@ -105,6 +101,7 @@
   font-size: 20px;
 
 /* images resizing starts here */
+}
 #ad-1 {
   width: 100%;
 }
@@ -264,7 +261,6 @@
   line-height: 5px;
 }
 
-=======
 @media only screen and (max-width:768px) {
   #form {
       
@@ -284,7 +280,6 @@
 
 
 /* font stuff */
->>>>>>> elham
 
 #boldFont {
   font-weight: bolder;
@@ -298,7 +293,6 @@
   font-size: 30px;
 }
 
-<<<<<<< HEAD
 /*  */
 
 #titles {
@@ -449,7 +443,6 @@
   cursor: pointer;
 }
 
-=======
 #button {
   background-color: #479e57
 }
@@ -609,7 +602,6 @@ placeholder {
   text-align: center;
 }
 
->>>>>>> elham
 
 
 /* formatting home page divs */
@@ -667,7 +659,6 @@ placeholder {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 
 #ad-2 {
   cursor: pointer;
@@ -677,7 +668,6 @@ placeholder {
 .carousel-images {
   cursor: default;
 }
-=======
 #ad-2 {
   cursor: pointer;
 }
@@ -722,4 +712,3 @@ placeholder {
 
 
 
->>>>>>> elham
