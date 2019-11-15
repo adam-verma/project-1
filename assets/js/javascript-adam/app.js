@@ -143,10 +143,11 @@ const database = firebase.database();
 const user = firebase.auth().currentUser;
 console.log(user);
 function writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeDiet, typeDiet) {
-  if (user != null) {
-    email = user.email;
-    userId = user.uid;
-    userRef = database.ref('users/' + userId + '/userInfo')
+  // if (user != null) {
+  //   email = user.email;
+  //   userId = user.uid;
+    // userRef = database.ref('users/' + userId + '/userInfo')
+    userRef = database.ref('');
     userRef.set({
       bmi: bmi,
       bmr: bmr,
@@ -180,7 +181,6 @@ function writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intak
       displayUserData(bmi, bmr, body_fat, daily_intake_cals, goal_weight_diff, typeId, typeDiet, breakfast, lunch, dinner)
     };
   });
-};
 };
 
 function displayUserData(bmi, bmr, body_fat, daily_intake_cals, goal_weight_diff, typeId, typeDiet, breakfast, lunch, dinner) {
