@@ -1,7 +1,3 @@
-// Create global variables of user info references
-let database = firebase.database();
-let userInfo = database.ref();
-
 // Create objects for each body type 
 const userShape = {
   height: 0,
@@ -59,15 +55,19 @@ const userShape = {
 $("#submit-question").on("click", function (event) {
   event.preventDefault();
 
-  breakfastMeat = $('input[name="breakfast-meat"]:checked').val();
-  breakfastSupp = $('input[name="breakfast-supp"]:checked').val();
-  lunchMeat = $('input[name="lunch-meat"]:checked').val();
-  lunchSupp = $('input[name="breakfast-supp"]:checked').val();
-  lunch = `${lunchMeat}%20${lunchSupp}` 
-  dinnerMeat = $('input[name="dinner-meat"]:checked').val();
-  dinnerSupp = $('input[name="breakfast-supp"]:checked').val();
-  dinner = `${dinnerMeat}%20${dinnerSupp}` 
-  
+  breakfastMeat = $('input[name="breakfast-meat"]:checked').val().replace(" ", "%20");
+  breakfastSupp = $('input[name="breakfast-supp"]:checked').val().replace(" ", "%20");
+  console.log(breakfastMeat, breakfastSupp)
+  breakfast = `${breakfastMeat}%20${breakfastSupp}`
+  lunchMeat = $('input[name="lunch-meat"]:checked').val().replace(" ", "%20");
+  lunchSupp = $('input[name="lunch-supp"]:checked').val().replace(" ", "%20");
+  console.log(lunchMeat, lunchSupp)
+  lunch = `${lunchMeat}%20${lunchSupp}`
+  dinnerMeat = $('input[name="dinner-meat"]:checked').val().replace(" ", "%20");
+  dinnerSupp = $('input[name="dinner-supp"]:checked').val().replace(" ", "%20");
+  console.log(dinnerMeat, dinnerSupp);
+  dinner = `${dinnerMeat}%20${dinnerSupp}`
+
   // Write variables pertaining to values from HTML selectors 
   userShape.height = parseInt($("#height-input").val().trim());
   userShape.weight = parseInt($('#weight-input').val().trim());
@@ -84,10 +84,10 @@ $("#submit-question").on("click", function (event) {
   userShape.gender = $('#gender-input').val().toString();
   const userExercise = $('input[name="form-radio-exercise"]:checked').val();
   console.log(userShape.gender)
-  let bmr, body_fat, daily_intake_cals, typeDiet, typeId;
+  let bmr, body_fat, daily_intake_cals, typeDiet, typeId, mealType;
 
   if (userShape.gender === 'Male') {
-    body_fat = (86.010 * Math.log10(userShape.waist - userShape.neck)) - (70.041 * Math.log10(userShape.height)) + 36.76
+    body_fat = parseInt((86.010 * Math.log10(userShape.waist - userShape.neck)) - (70.041 * Math.log10(userShape.height)) + 36.76).toFixed(1);
     bmr = 655 + (4.35 * userShape.weight) + (4.7 * userShape.height) - (4.7 * userShape.age);
     if (userExercise === "Do not exercise") {
       daily_intake_cals = parseFloat(bmr * userShape.types[4].activity_factor);
@@ -103,8 +103,7 @@ $("#submit-question").on("click", function (event) {
     }
 
   } else if (userShape.gender === 'Female') {
-    body_fat = (163.205 * Math.log10(userShape.waist + userShape.hip - userShape.neck)) - (97.684 * Math.log10(userShape.height)) - 78.387
-    console.log(body_fat)
+    body_fat = parseInt((163.205 * Math.log10(userShape.waist + userShape.hip - userShape.neck)) - (97.684 * Math.log10(userShape.height)) - 78.387).toFixed(1);
     bmr = 66 + (6.23 * userShape.weight) + (12.7 * userShape.height) - (6.8 * userShape.age);
     if (userExercise === "Do not exercise") {
       daily_intake_cals = parseFloat(bmr * userShape.types[4].activity_factor);
@@ -137,89 +136,120 @@ $("#submit-question").on("click", function (event) {
     typeDiet = userShape.types[4].diet;
   }
 
-  userInfo.push({
-    bmi: bmi,
-    bmr: bmr,
-    body_fat: body_fat,
-    daily_intake_cals: daily_intake_cals,
-    goal_weight_diff: goal_weight_diff,
-    typeId: typeId,
-    typeDiet, typeDiet,
-  })
-
-  displayNutritionInfo(daily_intake_cals,typeDiet)
+  writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeDiet, typeId)
 
   window.open('finalizeddietplanpage.html');
 });
-userInfo.on('value', function (snap) {
-  let data = snap.val();
-  let keys = Object.keys(data);
 
-  for (let i = 0; i < keys.length; i++) {
-    let k = keys[i];
-    let bmi = data[k].bmi;
-    let bmr = data[k].bmr;
-    let body_fat = data[k].body_fat;
-    let daily_intake_cals = data[k].daily_intake_cals;
-    let goal_weight_diff = data[k].goal_weight_diff;
-    let typeDiet = data[k].typeDiet;
-    let typeId = data[k].typeId;
-  
-    appendUserData(bmi,bmr,body_fat,daily_intake_cals,goal_weight_diff,typeId,typeDiet,breakfast,lunch,dinner)
-  };
-});
+// Create global variables of user info references
+const database = firebase.database();
+const user = firebase.auth().currentUser;
+console.log(user);
+function writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeDiet, typeDiet) {
+  if (user != null) {
+    email = user.email;
+    userId = user.uid;
+    userRef = database.ref('users/' + userId + '/userInfo')
+    userRef.set({
+      bmi: bmi,
+      bmr: bmr,
+      body_fat: body_fat,
+      breakfast: breakfast,
+      lunch: lunch,
+      dinner: dinner,
+      daily_intake_cals: daily_intake_cals,
+      goal_weight_diff: goal_weight_diff,
+      typeDiet: typeDiet,
+      typeId: typeId,
+    });
 
-function appendUserData(bmi,bmr,body_fat,daily_intake_cals,goal_weight_diff,typeId,typeDiet,breakfast,lunch,dinner) {
-  
+  userRef.on('value', function (snap) {
+    let data = snap.val();
+    let keys = Object.keys(data);
+
+    for (let i = 0; i < keys.length; i++) {
+      let k = keys[i];
+      let bmi = data[k].bmi;
+      let bmr = data[k].bmr;
+      let body_fat = data[k].body_fat;
+      let daily_intake_cals = data[k].daily_intake_cals;
+      let goal_weight_diff = data[k].goal_weight_diff;
+      let breakfast = data[k].breakfast;
+      let lunch = data[k].lunch;
+      let dinner = data[k].dinner;
+      let typeDiet = data[k].typeDiet;
+      let typeId = data[k].typeId;
+
+      displayUserData(bmi, bmr, body_fat, daily_intake_cals, goal_weight_diff, typeId, typeDiet, breakfast, lunch, dinner)
+    };
+  });
+};
+};
+
+function displayUserData(bmi, bmr, body_fat, daily_intake_cals, goal_weight_diff, typeId, typeDiet, breakfast, lunch, dinner) {
+
   let bmiEl = $('<p>').text(`Currently, based on your Body Mass Index of ${bmi} you are a(n) ${typeId} type`);
   let fatEl = $('<p>').text(`${body_fat}%`);
 
   bodyfatDiv = $("<div class= 'body-fat'>").append(fatEl);
   bmiDiv = $("<div class= 'body-fat'>").append(bmiEl);
-  $('.health-info').append(bmiDiv,bodyfatDiv);
-}
-// displayNutritionInfo function re-renders the HTML to display the appropriate content
-function displayNutritionInfo(typeDiet, foodGroupItem, daily_intake_cals) {
-  console.log(typeDiet, daily_intake_cals);
-  const queryURL =
-    `https://api.edamam.com/search?q=${foodGroupItem}&diet=${typeDiet}&app_id=72b0f0df`;
+  $('.health-info').empty();
+  $('.health-info').append(bmiDiv, bodyfatDiv);
 
-  // Creating an AJAX call for the specific gif button being clicked
-  $.ajax({
-    url: queryURL,
-    method: "GET",
-  }).then(function (response) {
-    const results = response.hits;
-    // Creating a div to hold the diet information
-    for (let i = 0; i < results.length; i++) {
-      const single_serving = parseFloat(1 / parseInt(results[i].recipe.yield)).toFixed(2);
-      const calories = parseInt(results[i].recipe.calories * single_serving);
+  let mealType = [breakfast, lunch, dinner]
+  let stringMeal = ['.breakfast', '.lunch', '.dinner']
+  for (let j = 0; j < mealType.length; j++) {
+    foodGroupItem = mealType[j];
+    const queryURL =
+      `https://api.edamam.com/search?q=${foodGroupItem}&diet=${typeDiet}&app_id=72b0f0df`;
 
-      // Compare daily intake to calories per recipe 
-      if (daily_intake_cals - 500 > calories) {
-      const dietChoiceButton = $("<button class='diet'>");
-      //Storing the recipe name, calories, image 
+    // Creating an AJAX call for the specific gif button being clicked
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function (response) {
+      const results = response.hits;
+      // Creating a div to hold the diet information
+      for (let i = 0; i < results.length; i++) {
+        const single_serving = parseFloat(1 / parseInt(results[i].recipe.yield)).toFixed(2);
+        const calories = parseInt(results[i].recipe.calories * single_serving);
 
-      const label = results[i].recipe.label;
-      const fat = parseInt(results[i].recipe.totalNutrients.FAT * single_serving) + "g";
-      const carb = parseInt(results[i].recipe.totalNutrients.CHOCDF * single_serving) + "g";
-      const protein = parseInt(results[i].recipe.totalNutrients.FAT * single_serving) + "g";
-      
-      const recipeImgURL = results[i].recipe.image;
-        // Creating an element to have the label, calories, image displayed
+        // Compare daily intake to calories per recipe 
+        if (daily_intake_cals - 500 > calories) {
+          const dietChoiceButton = $("<button class='diet'>");
+          //Storing the recipe name, calories, image 
 
-        const labEl = $("<p>").text(label);
-        const caloriesEl = $("<p>").text(calories);
-        const fatEl = $("<p>").text(fat);
-        const img = $("<img>").attr("src", recipeImgURL).addClass("recipeImage");
+          const label = results[i].recipe.label;
+          const recipelink = results[i].recipe.url;
+          const fat = parseInt(results[i].recipe.totalNutrients.FAT.quantity * single_serving);
+          const carb = parseInt(results[i].recipe.totalNutrients.CHOCDF.quantity * single_serving);
+          const protein = parseInt(results[i].recipe.totalNutrients.PROCNT.quantity * single_serving);
+          const recipeImgURL = results[i].recipe.image;
+          // Creating an element to have the label, calories, image displayed
 
-        // Putting the entire gif above the previous gifs
-        $("#breakfast").append(dietChoiceButton);
+          const labEl = $("<p>").text(label);
+          const caloriesEl = $("<p>").text("Calories: " + calories + " cals");
+          const carbEl = $("<p>").text("Carbs: " + carb + " grams");
+          const fatEl = $("<p>").text("Fat: " + fat + " grams");
+          const protEl = $("<p>").text("Protein : " + protein + " grams");
+          const img = $("<img>").attr("src", recipeImgURL).addClass("recipeImage");
+          const linkFace = document.createTextNode("Click here for more details on recipe");
+          const linkEl = document.createElement('a');
+          linkEl.href = recipelink;
+          linkEl.title = "Click here for more details on recipe"
+          linkEl.appendChild(linkFace);
+          linebreak = $('<br>')
 
-        $(".diet").on("click", function (e) {
-          $('.recipe-info-body').append(img,labEl, caloriesEl, fatEl)
-        });
+          dietChoiceButton.append(labEl);
+
+          $(stringMeal[j]).append(dietChoiceButton)
+
+          $(".diet").on("click", function (e) {
+
+            $('.recipe-info-body').append(img, labEl, caloriesEl, carbEl, fatEl, protEl, linkEl, linebreak, linebreak);
+          });
+        };
       }
-    }
-  });
-};
+    });
+  }
+}

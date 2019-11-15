@@ -153,37 +153,37 @@
                     <div class="form-row">
                         <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Eggs">
+                            <input type="checkbox" name="breakfast-meat" value="Eggs">
                             <label class="form-radio-label" for="form-check-input">Eggs</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Bacon">
+                            <input type="checkbox" name="breakfast-meat" value="Bacon">
                             <label class="form-check-label" for="form-check-input">Bacon</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Sausage">
+                            <input type="checkbox" name="breakfast-meat" value="Sausage">
                             <label class="form-check-label" for="form-check-input">Sausage</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-meat" value="Pork">
+                            <input type="checkbox" name="breakfast-meat" value="Pork">
                             <label class="form-check-label" for="form-check-input">Pork</label>
                         </div>
                         </div>
                         <div class="form-row">
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Oats">
+                            <input type="checkbox" name="breakfast-supp" value="Oats">
                             <label class="form-radio-label" for="form-check-input">Oats</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Flaxseed">
+                            <input type="checkbox" name="breakfast-supp" value="Flaxseed">
                             <label class="form-check-label" for="form-check-input">Flaxseed</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Whole Grain">
+                            <input type="checkbox" name="breakfast-supp" value="Whole Grain">
                             <label class="form-check-label" for="form-check-input">Whole Grain</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" class="form-radio-input breakfast-carb" value="Avocado">
+                            <input type="checkbox" name="breakfast-supp" value="Avocado">
                             <label class="form-check-label" for="form-check-input">Avocado</label>
                         </div>
                         </div>
@@ -207,15 +207,15 @@
                             <label class="form-check-label" for="form-check-input">Beef</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" name="lunch-carb" value="Couscous">
+                            <input type="checkbox" name="lunch-supp" value="Couscous">
                             <label class="form-check-label" for="form-check-input">Couscous</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" name="lunch=carb" value="Quinoa">
+                            <input type="checkbox" name="lunch-supp" value="Quinoa">
                             <label class="form-check-label" for="form-check-input">Quinoa</label>
                         </div>
                         <div class="form-group form-check mr-2">
-                            <input type="checkbox" name="lunch-carb" value="Sweet Potato">
+                            <input type="checkbox" name="lunch-supp" value="Sweet Potato">
                             <label class="form-check-label" for="form-check-input">Sweet Potato</label>
                         </div>
                     </div>
@@ -226,8 +226,8 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group form-check mr-2 veg">
-                            <input type="checkbox" class="dinner-meat" value="Steak">
-                            <label class="form-check-label" for="form-check-input">Eggplant</label>
+                            <input type="checkbox" name="dinner-meat" value="Steak">
+                            <label class="form-check-label" for="form-check-input">Steak</label>
                         </div>
                         <div class="form-group form-check mr-2">
                             <input type="checkbox" name="dinner-meat" value="Tofu">
@@ -255,8 +255,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!--fixed bottom footer-->
     <nav class="navbar-bottom navbar-expand-lg navbar-light bg-light" id="bottom-navbar">
@@ -295,6 +293,9 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
