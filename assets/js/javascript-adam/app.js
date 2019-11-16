@@ -56,6 +56,7 @@ const userShape = {
 $("#submit-question").on("click", function (event) {
   event.preventDefault();
 
+
   protein = $('input[name="protein"]:checked').val().replace(" ", "%20");
   sides = $('input[name="sides"]:checked').val().replace(" ", "%20");
   meal = `${protein}%20${sides}`
@@ -225,6 +226,7 @@ function displayUserData(daily_intake_cals,typeDiet,meal) {
 
           $(".diet").on("click", function (e) {
             $('.recipe-info-body').append(img, labEl, caloriesEl, carbEl, totalfatEl, transfatEl, sugarEl, protEl, linkEl, linebreak, linebreak);
+
           });
         };
       }
