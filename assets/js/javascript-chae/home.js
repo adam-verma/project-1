@@ -30,33 +30,33 @@ $("#log-stats-button").on("click", function (event) {
 
 
 
-  // getting info from firebase and logging it into the graph 
-  var ref = database.ref("dailyConsumedCalories");
-  database.ref().on("value", gotData, errData);
+  // // getting info from firebase and logging it into the graph 
+  // var ref = database.ref("dailyConsumedCalories");
+  // database.ref().on("value", gotData, errData);
 
-  function gotData(data) {
-    // console.log(data.val());
-    var data = data.val();
-    var keys = Object.keys(data);
-    console.log(keys); //this gives an array of all the keys in that object 
+  // function gotData(data) {
+  //   // console.log(data.val());
+  //   var data = data.val();
+  //   var keys = Object.keys(data);
+  //   console.log(keys); //this gives an array of all the keys in that object 
 
-    for (var i = 0; i < keys.length; i++) {
-      var k = keys[i];
-      let caloriesU = data[k].dailyConsumedCalories;
-      let exerciseU = data[k].dailyExerciseAmount;
-      calories = caloriesU;
-      exercise = exerciseU;
-      drawDualY(caloriesU, exerciseU)
-      console.log(calories);
-      console.log(exercise);
-    };
+  //   for (var i = 0; i < keys.length; i++) {
+  //     var k = keys[i];
+  //     let caloriesU = data[k].dailyConsumedCalories;
+  //     let exerciseU = data[k].dailyExerciseAmount;
+  //     calories = caloriesU;
+  //     exercise = exerciseU;
+  //     drawDualY(caloriesU, exerciseU)
+  //     console.log(calories);
+  //     console.log(exercise);
+  //   };
 
-  }
+  // }
 
-  function errData(err) {
-    console.log("error!");
-    console.log(err);
-  }
+  // function errData(err) {
+  //   console.log("error!");
+  //   console.log(err);
+  // }
 
 
 });
@@ -120,20 +120,30 @@ $("#ad-2").on("click", function () {
 
 
 // GETTING INFO FROM FIREBASE FROM THE FORM PAGE TO PUSH INTO THE HOMEPAGE -------------
-database.ref().on("child_added", function (snapshot) {
-  const snap = snapshot.val();
+function callUserInfo (height,weight,goal_weight_diff) {
+// database.ref().on("child_added", function (snapshot) {
+// //   const snap = snapshot.val();
 
-  $("#firebase-weight").empty();
-  $("#firebase-weight").append("<p>" + snap.weightUser + "</p>");
+//   $("#firebase-weight").empty();
+//   $("#firebase-weight").append("<p>" + snap.weightUser + "</p>");
 
-  $("#firebase-height").empty();
-  $("#firebase-height").append("<p>" + snap.heightUser + "</p>");
+//   $("#firebase-height").empty();
+//   $("#firebase-height").append("<p>" + snap.heightUser + "</p>");
 
-  $("#firebase-goal-weight").empty();
-  $("#firebase-goal-weight").append("<p>" + (snap.weightUser - snap.targetWeightUser) + "<p>");
+//   $("#firebase-goal-weight").empty();
+// //   $("#firebase-goal-weight").append("<p>" + (snap.weightUser - snap.targetWeightUser) + "<p>");
 
-});
+// });
+    $("#firebase-weight").empty();
+    $("#firebase-weight").append("<p>" + weight + "</p>");
 
+    $("#firebase-height").empty();
+    $("#firebase-height").append("<p>" + height + "</p>");
+
+    $("#firebase-goal-weight").empty();
+    $("#firebase-goal-weight").append("<p>" + goal_weight_diff + "</p>");
+
+}
 
 // setting button to log out and go to the login page on click 
 $("#log-out-button").on("click", function () {

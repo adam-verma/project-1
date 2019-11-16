@@ -34,6 +34,7 @@
         console.log(errorMessage)
           $(".message-signup").html("<strong>try again! (error)</strong>"+ errorMessage);
       });
+  
       //adding users name  to fire base 
       database.ref().push(fullname);
       
@@ -43,7 +44,6 @@
       $("#signup-password").val("");
 
   };
-
 
   // login part
 function login () {
