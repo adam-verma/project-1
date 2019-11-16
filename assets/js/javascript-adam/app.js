@@ -129,6 +129,9 @@ $("#submit-question").on("click", function (event) {
   }
 
   userRef.set({
+    weight: userShape.weight,
+    goal_weight_diff: goal_weight_diff,
+    height: userShape.height,
     bmi: bmi,
     bmr: bmr,
     body_fat: body_fat,
@@ -145,6 +148,9 @@ $("#submit-question").on("click", function (event) {
 // Create global variables of user info references
 userRef.on('value', function (snap) {
   let data = snap.val();
+  let weight = data.weight; 
+  let height = data.height;
+  let goal_weight_diff = data.goal_weight_diff;
   let bmi = data.bmi;
   let bmr = data.bmr;
   let body_fat = data.body_fat;
@@ -154,6 +160,7 @@ userRef.on('value', function (snap) {
   let typeDiet = data.typeDiet;
   let typeId = data.typeId;
 
+  callUserInfo(height,weight,goal_weight_diff);
   appendUserData(bmi,body_fat,typeId,daily_weightLoss);
   displayUserData(daily_intake_cals,typeDiet,meal)
 });
