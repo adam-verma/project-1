@@ -62,107 +62,48 @@ $("#log-stats-button").on("click", function (event) {
 });
 
 
-//  F U N C T I O N 2 -----------------------------------
+let keepCalories = 0;
+let keepExercise = 0;
+
+// adding inputs to keep track 
+$("#log-stats-button").on("click", function (e, checkInp) {
+  e.preventDefault();
+
+  keepCalories += parseInt($("#input-calories").val().trim());
+  keepExercise += parseInt($("#input-exercise").val());
 
 
+  $("#keep-up-calories").text(keepCalories + " cal");
+  $("#keep-up-exercise").text(keepExercise + " mins");
 
-//  GOOGLE CHARTS STARTS HERE -------------------------------
-// Set a callback to run when the Google Visualization API is loaded.
-google.charts.load('current', {
-  packages: ['corechart', 'bar']
+
+  $("#input-calories").val("");
+  $("#input-exercise").val("");
+
 });
-google.charts.setOnLoadCallback(drawDualY);
-
-// Callback that creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawDualY(calories=0, exercise=0) {
-
-  // Create the data table.
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Day of Week');
-  data.addColumn('number', 'Calorie Intake');
-  data.addColumn('number', 'Exercise Time');
-
-  data.addRows([
-    ['Monday', calories, exercise],
-    ['Tuesday', 0, 0],
-    ['Wednesday', 0, 0],
-    ['Thursday', 0, 0],
-    ['Friday', 0, 0],
-    ['Saturday', 0, 0],
-    ['Sunday', 0, 0]
-
-  ]);
 
 
-  // Set chart options
-  var options = {
-    chart: {
-      title: 'Caloric Intake to Exercise Ratio',
-      subtitle: 'Based on a scale of 1 to 10'
-    },
-    series: {
-      0: {
-        axis: 'Caloric Intake'
-      },
-      1: {
-        axis: 'Exercise Level'
-      }
-    },
-    axes: {
-      y: {
-        MotivationLevel: {
-          label: 'Caloric Intake'
-        },
-        EnergyLevel: {
-          label: 'Exercise Level'
-        }
-      }
-    },
-    hAxis: {
-      title: 'Time of Day',
-      format: 'number',
-      viewWindow: {
-        min: [1000],
-        max: []
-      }
-    },
-    vAxis: {
-      title: 'Rating (scale of 1-10)',
-      viewWindow: {
-        min: [],
-        max: []
-      }
-    },
+function checkInp() {
+  var w = $("#input-calories").val();
+  if (w === "") {
+    alert("Calorie input must not be empty, if none input 0");
+  };
+  if (isNaN(w)) {
+    alert("Calorie input must be a number");
+    return false;
   };
 
-  // Instantiate and draw our chart, passing in some options.
-  var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
-  materialChart.draw(data, options);
+
+  var q = $("#input-exercise").val();
+  if (q === "") {
+    alert("Exercise input must not be empty, if none input 0");
+  };
+  if (isNaN(q)) {
+    alert("Exercise input must be a number");
+    return false;
+  };
+
 }
-
-
-
-
-
-
-
-
-
-
-//adds the info into the html (change code to push the info into the data array)
-// database.ref().on("child_added", function(snapshot) {
-//     //i need to figure out what this actually does, how is it looping 
-//     const snap = snapshot.val();
-
-//     //console out to see if it works
-//     console.log(snap.dailyConsumedCalories);
-//     console.log(snap.dailyExerciseAmount);
-
-//     //append to the html to see if it works
-
-// });
 
 
 
