@@ -118,6 +118,7 @@
                             <label for="formControlRange">Today's Motivation Level (🥺 to 🙂)</label>
                             <input type="range" class="form-control-range" id="formControlRange">
                         </div>
+
                         <button type="button" onclick="return checkInp()" class="btn btn-secondary btn-lg btn-block"
                             id="log-stats-button">Log
                             Stats</button>
@@ -132,6 +133,7 @@
                             <p class="profile-subtitles">Exercise Time Tracker</p>
                             <p class="orange-subtitles" id="keep-up-exercise">0 mins</p>
                         </div>
+
                     </div>
                 </div>
 
@@ -142,6 +144,7 @@
 
 
         <div class="row mt-3">
+
             <div class="card col-md-12" id="blank">
                 <p id="profile-title">Today's Run Trail</p>
                 <div class="row">
@@ -153,6 +156,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -233,6 +237,11 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+
+        // Reference the database service 
+        database = firebase.database();
+        auth = firebase.auth();
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -241,8 +250,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
-    <script src="assets/js/javascript-chae/home.js"></script>
-    <script src="./assets/js/javascript-elham/sign up.js"></script>
+
+    <script type="text/javascript" src="./assets/js/javascript-elham/sign up.js"></script>
+    <script type="text/javascript" src="assets/js/javascript-chae/home.js"></script>
+    <script type="text/javascript" src="./assets/js/javascript-adam/app.js"></script>
+
 </body>
 
 </html>

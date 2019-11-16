@@ -46,7 +46,8 @@
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="submit">Search</button>
-        <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="button" id="logout-button">Log Out</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="button" id="logout-button">Log
+          Out</button>
       </form>
     </div>
   </nav>
@@ -113,8 +114,10 @@
         <div class="cardText" id="fitness-section-videos">
           <iframe width="535" height="315" src="https://www.youtube.com/embed/2pLT-olgUJs" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="535" height="315" src="https://www.youtube.com/embed/rptV4dEJUx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="535" height="315" src="https://www.youtube.com/embed/CSRtn7N0lWI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="535" height="315" src="https://www.youtube.com/embed/rptV4dEJUx4" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="535" height="315" src="https://www.youtube.com/embed/CSRtn7N0lWI" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -158,29 +161,39 @@
 
   <!--All the script tag-->
 
-   <!--javascript file-->
-  
+  <!--javascript file-->
+
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
-  <script>const firebaseConfig = {
-    apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
-    authDomain: "nutritfit-a2eef.firebaseapp.com",
-    databaseURL: "https://nutritfit-a2eef.firebaseio.com",
-    projectId: "nutritfit-a2eef",
-    storageBucket: "nutritfit-a2eef.appspot.com",
-    messagingSenderId: "646248193448",
-    appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
-    measurementId: "G-KYQ1YX7K38"
-  };
-     // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
+      authDomain: "nutritfit-a2eef.firebaseapp.com",
+      databaseURL: "https://nutritfit-a2eef.firebaseio.com",
+      projectId: "nutritfit-a2eef",
+      storageBucket: "nutritfit-a2eef.appspot.com",
+      messagingSenderId: "646248193448",
+      appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
+      measurementId: "G-KYQ1YX7K38"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Reference the database service 
+    database = firebase.database();
+    auth = firebase.auth();
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="./assets/js/javascript-elham/sign up.js"></script>
   <script src="assets/js/javascript-chae/fitness.js"></script>
   <script src="./assets/js/javascript-elham/sign up.js"></script>
 

@@ -1,9 +1,6 @@
 
 //setting up the basics for firebase usage 
 
-
-const data_base = firebase.database();
-
 //   setting the variables to get for the homepage 
 
 const weight = 0;
@@ -196,7 +193,7 @@ $("#continue-button").on("click", function () {
 
 
 
-    data_base.ref().push({
+    database.ref().push({
         genderUser: userGender,
         dateOfBirthUser: userDateOfBirth,
         bloodTypeUser: userBloodType,

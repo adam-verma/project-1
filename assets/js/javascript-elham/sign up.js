@@ -2,11 +2,12 @@
 
 
   $(document).ready(function(){
-  
+
 
    
      
     // register for page 
+
     function signup () {
             ///store full name on fire base 
        let fullname = $("#full-Name").val().trim();
