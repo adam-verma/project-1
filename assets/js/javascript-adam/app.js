@@ -54,7 +54,7 @@ const userShape = {
 // // This function handles events where a foodGroupItem box is checked
 $("#submit-question").on("click", function (event) {
   event.preventDefault();
-
+console.log("button clicked")
   breakfastMeat = $('input[name="breakfast-meat"]:checked').val().replace(" ", "%20");
   breakfastSupp = $('input[name="breakfast-supp"]:checked').val().replace(" ", "%20");
   breakfast = `${breakfastMeat}%20${breakfastSupp}`
@@ -132,20 +132,19 @@ $("#submit-question").on("click", function (event) {
     typeDiet = userShape.types[4].diet;
   }
 
-  writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeDiet, typeId)
+  writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeId, typeDiet)
 
   window.open('finalizeddietplanpage.html');
 });
 
 // Create global variables of user info references
-const user = firebase.auth().currentUser;
-console.log(user);
-function writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeDiet, typeDiet) {
-  // if (user != null) {
-  //   email = user.email;
-  //   userId = user.uid;
-    // userRef = database.ref('users/' + userId + '/userInfo')
-    userRef = database.ref('');
+const database = firebase.database();
+function writeUserData(user, bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intake_cals, goal_weight_diff, typeId, typeDiet) {
+  if (user != null) {
+    console.log(user)
+    email = user.email;
+    userId = user.uid;
+    userRef = database.ref('users/' + userId + '/userInfo')
     userRef.set({
       bmi: bmi,
       bmr: bmr,
@@ -179,6 +178,7 @@ function writeUserData(bmi, bmr, body_fat, breakfast, lunch, dinner, daily_intak
       displayUserData(bmi, bmr, body_fat, daily_intake_cals, goal_weight_diff, typeId, typeDiet, breakfast, lunch, dinner)
     };
   });
+};
 };
 
 function displayUserData(bmi, bmr, body_fat, daily_intake_cals, goal_weight_diff, typeId, typeDiet, breakfast, lunch, dinner) {
@@ -239,8 +239,8 @@ function displayUserData(bmi, bmr, body_fat, daily_intake_cals, goal_weight_diff
 
           $(stringMeal[j]).append(dietChoiceButton)
 
-          $(".diet").on("click", function (e) {
-
+          $(".diet").on("click", function (event) {
+            event.preventDefault();
             $('.recipe-info-body').append(img, labEl, caloriesEl, carbEl, fatEl, protEl, linkEl, linebreak, linebreak);
           });
         };
