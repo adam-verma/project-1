@@ -3,23 +3,22 @@
 
   $(document).ready(function(){
   
-     const auth = firebase.auth();
-     const database = firebase.database();
+
    
      
-    /// register 
+    // register for page 
     function signup () {
             ///store full name on fire base 
        let fullname = $("#full-Name").val().trim();
        let email = $("#signup-email").val().trim();
        let password = $("#signup-password").val().trim();
-     auth.createUserWithEmailAndPassword(email, password)
-     .then(function(){
+      auth.createUserWithEmailAndPassword(email, password)
+      .then(function(){
       auth.onAuthStateChanged(function(user) {
         if (user) {
          console.log(user)
         window.location = "./finalizedformpage.html"
-        
+        writeUserData(user)
         } else {
         
         };
@@ -34,7 +33,7 @@
         console.log(errorMessage)
           $(".message-signup").html("<strong>try again! (error)</strong>"+ errorMessage);
       });
-      //adding to fire base 
+      //adding users name  to fire base 
       database.ref().push(fullname);
       
       // set the value empty for inputs
@@ -69,15 +68,14 @@ function login () {
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log(errorMessage)
-
-      $(".message-login").html("<strong>try again! (error)</strong>"+ errorMessage)
+    $(".message-login").html("<strong>try again! (error)</strong>"+ errorMessage)
   });
   $("#userEmail-signin").val("");
   $("#password-signin").val("");
 }
   
 
-// //init Modals
+ //init Modals
 $(document).on("click", "#login-button", function(event){
      event.preventDefault();
     console.log("Button Clicked")
@@ -88,9 +86,10 @@ $(document).on("click", "#login-button", function(event){
   //signout
   function signout(){
 
-    auth.signOut().then(function() {
-        window.location = "./index.html"
-      console.log('Signed Out');
+  auth.signOut().then(function() {
+
+  window.location = "./index.html"
+  console.log('Signed Out');
     
 })
 .catch(function(error){
@@ -108,13 +107,14 @@ $(document).on("click", "#login-button", function(event){
 
   })
 
-//   //recipe page start from here 
+//recipe page start from here -----------------------------------------
+
 $("#search-button").on("click", function(e) {
-  e.preventDefault();
+e.preventDefault();
 const queryURL = `https://www.googleapis.com/youtube/v3/search`;
 
 
-// Creating an AJAX call for the specific video button being clicked
+// Creating an AJAX call for the specific videos that we search in input
 $.ajax({
 cache: false,
  data: $.extend({
@@ -137,11 +137,12 @@ cache: false,
 
      results = response.items;
      for(let i=0; i<results.length; i++) {
-      //      // creating one input and give that attr
-        const $video = $("<iframe>").attr("src",`https://www.youtube.com/embed/`+results[i].id.videoId)
-       $video.addClass("video");
-       $("#display-videos").append(`<h2> ${results[i].snippet.title}</h2>`)
-        $("#display-videos").append($video);
+
+         // creating one input and give that attr
+      const $video = $("<iframe>").attr("src",`https://www.youtube.com/embed/`+results[i].id.videoId)
+      $video.addClass("video");
+      $("#display-videos").append(`<h2> ${results[i].snippet.title}</h2>`)
+      $("#display-videos").append($video);
         
      }  
 
