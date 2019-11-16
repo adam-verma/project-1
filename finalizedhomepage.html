@@ -57,7 +57,8 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" type="submit">Search</button>
-                <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" id="logout-button" type="button">Log Out</button>
+                <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2 navbar-btn" id="logout-button"
+                    type="button">Log Out</button>
             </form>
         </div>
     </nav>
@@ -107,11 +108,12 @@
                             <label for="formControlRange">???Something here???</label>
                             <input type="range" class="form-control-range" id="formControlRange">
                         </div>
-                        <button type="button" class="btn btn-secondary btn-lg btn-block" id="log-stats-button">Log Stats</button>
+                        <button type="button" class="btn btn-secondary btn-lg btn-block" id="log-stats-button">Log
+                            Stats</button>
                         <div id="ignore-this"> to give space at bottom</div>
 
 
-                    </div>   
+                    </div>
                 </div>
 
 
@@ -127,80 +129,78 @@
                 <script>
                     google.charts.load('current', {
                         packages: ['corechart', 'bar']
-                      });
-                      google.charts.setOnLoadCallback(drawDualY);
-                      
-                      // Callback that creates and populates a data table,
-                      // instantiates the pie chart, passes in the data and
-                      // draws it.
-                      function drawDualY(calories=0, exercise=0) {
-                      
+                    });
+                    google.charts.setOnLoadCallback(drawDualY);
+
+                    // Callback that creates and populates a data table,
+                    // instantiates the pie chart, passes in the data and
+                    // draws it.
+                    function drawDualY(calories = 0, exercise = 0) {
+
                         // Create the data table.
                         var data = new google.visualization.DataTable();
                         data.addColumn('string', 'Day of Week');
                         data.addColumn('number', 'Calorie Intake');
                         data.addColumn('number', 'Exercise Time');
-                      
+
                         data.addRows([
-                          ['Monday', calories, exercise],
-                          ['Tuesday', 0, 0],
-                          ['Wednesday', 0, 0],
-                          ['Thursday', 0, 0],
-                          ['Friday', 0, 0],
-                          ['Saturday', 0, 0],
-                          ['Sunday', 0, 0]
-                      
+                            ['Monday', calories, exercise],
+                            ['Tuesday', 0, 0],
+                            ['Wednesday', 0, 0],
+                            ['Thursday', 0, 0],
+                            ['Friday', 0, 0],
+                            ['Saturday', 0, 0],
+                            ['Sunday', 0, 0]
+
                         ]);
-                      
-                      
+
+
                         // Set chart options
                         var options = {
-                          chart: {
-                            title: 'Caloric Intake to Exercise Ratio',
-                            subtitle: 'Based on a scale of 1 to 10'
-                          },
-                          series: {
-                            0: {
-                              axis: 'Caloric Intake'
+                            chart: {
+                                title: 'Caloric Intake to Exercise Ratio',
+                                subtitle: 'Based on a scale of 1 to 10'
                             },
-                            1: {
-                              axis: 'Exercise Level'
-                            }
-                          },
-                          axes: {
-                            y: {
-                              MotivationLevel: {
-                                label: 'Caloric Intake'
-                              },
-                              EnergyLevel: {
-                                label: 'Exercise Level'
-                              }
-                            }
-                          },
-                          hAxis: {
-                            title: 'Time of Day',
-                            format: 'number',
-                            viewWindow: {
-                              min: [1000],
-                              max: []
-                            }
-                          },
-                          vAxis: {
-                            title: 'Rating (scale of 1-10)',
-                            viewWindow: {
-                              min: [],
-                              max: []
-                            }
-                          },
+                            series: {
+                                0: {
+                                    axis: 'Caloric Intake'
+                                },
+                                1: {
+                                    axis: 'Exercise Level'
+                                }
+                            },
+                            axes: {
+                                y: {
+                                    MotivationLevel: {
+                                        label: 'Caloric Intake'
+                                    },
+                                    EnergyLevel: {
+                                        label: 'Exercise Level'
+                                    }
+                                }
+                            },
+                            hAxis: {
+                                title: 'Time of Day',
+                                format: 'number',
+                                viewWindow: {
+                                    min: [1000],
+                                    max: []
+                                }
+                            },
+                            vAxis: {
+                                title: 'Rating (scale of 1-10)',
+                                viewWindow: {
+                                    min: [],
+                                    max: []
+                                }
+                            },
                         };
-                      
+
                         // Instantiate and draw our chart, passing in some options.
                         var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
                         materialChart.draw(data, options);
-                      }
-                      
-                      
-                    </script>
+                    }
+                </script>
 
             </div>
         </div>
@@ -255,34 +255,44 @@
             </ul>
         </div>
 
-        <img src="assets/images/logo.png" id="logo"/>
+        <img src="assets/images/logo.png" id="logo" />
 
     </nav>
 
-  <!--All the script tag-->
+    <!--All the script tag-->
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
-  <script>const firebaseConfig = {
-    apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
-    authDomain: "nutritfit-a2eef.firebaseapp.com",
-    databaseURL: "https://nutritfit-a2eef.firebaseio.com",
-    projectId: "nutritfit-a2eef",
-    storageBucket: "nutritfit-a2eef.appspot.com",
-    messagingSenderId: "646248193448",
-    appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
-    measurementId: "G-KYQ1YX7K38"
-  };
-     // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-   </script> 
-  <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="assets/js/javascript-chae/home.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAM5HFiBF7iP96i-T_Z5q77Ijwj5FASDR0",
+            authDomain: "nutritfit-a2eef.firebaseapp.com",
+            databaseURL: "https://nutritfit-a2eef.firebaseio.com",
+            projectId: "nutritfit-a2eef",
+            storageBucket: "nutritfit-a2eef.appspot.com",
+            messagingSenderId: "646248193448",
+            appId: "1:646248193448:web:199e0f3fc21f1ec13f519d",
+            measurementId: "G-KYQ1YX7K38"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // Reference the database service 
+        database = firebase.database();
+        auth = firebase.auth();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="./assets/js/javascript-elham/sign up.js"></script>
+    <script type="text/javascript" src="assets/js/javascript-chae/home.js"></script>
+    <script type="text/javascript" src="./assets/js/javascript-adam/app.js"></script>
 </body>
 
 </html>

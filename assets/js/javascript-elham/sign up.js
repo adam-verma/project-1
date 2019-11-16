@@ -2,11 +2,7 @@
 
 
   $(document).ready(function(){
-  
-     const auth = firebase.auth();
-     const database = firebase.database();
-   
-     
+       
     /// register 
     function signup () {
             ///store full name on fire base 
