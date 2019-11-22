@@ -3,6 +3,7 @@
 ## Project Summary
 
 •	Our mission for this site is to provide dietary plans and fitness product suggestions to clients for boosting health and body confidence.  
+
 •	Elham Poshtiban:  
 o	Portfolio: *https://github.com/elhamposhtiban/Bootstrap-Portfolio*  
 o	GitHub: *https://github.com/elhamposhtiban*  
@@ -15,19 +16,19 @@ o	LinkedIn: *https://www.linkedin.com/in/adam-verma/*
 o	Portfolio: * *    
 o	GitHub: *https://github.com/chaejung-50*  
 o	LinkedIn: * *    
-##Animated Gifs/Pictures of App  
+###  Animated Gifs/Pictures of App  
  
-##Tech Stack  
+### Tech Stack  
 •	What languages is it written with? JavaScript, HTML & CSS.  
 •	What libraries are used? Bootstrap, jQuery & Firebase, Google Fonts.  
-##APIs
+### APIs
 •	What APIs did you use? YouTube API, Edamam API  
-##MVP  
+## MVP  
 •	Multiple webpages   
 •	Clean and functional UI   
 •	Linking of multiple APIs   
 •	Functional links and tabs within the webpage   
-Stretch Goals   
+### Stretch Goals   
 •	Create a functional Signup form, Login and Logout feature using Firebase authentication   
 •	API for trending news or category   
 Future Development   
