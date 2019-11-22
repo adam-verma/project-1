@@ -5,6 +5,7 @@
 
 •	Our mission for this site is to provide dietary plans and fitness product suggestions to clients for boosting health and body confidence.  
 
+## Contact Us
 •	Elham Poshtiban:  
     [Portfolio Link](https://github.com/elhamposhtiban/Bootstrap-Portfolio)  
  	  [GitHub Link](https://github.com/elhamposhtiban)  
