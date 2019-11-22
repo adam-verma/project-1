@@ -12,10 +12,11 @@ o	LinkedIn: *https://www.linkedin.com/in/elham-poshtiban-2a40a4149/*
 o	Portfolio: *https://adam-verma.github.io/Responsive-Portfolio/portfolio.html*   
 o	GitHub: *https://github.com/adam-verma*  
 o	LinkedIn: *https://www.linkedin.com/in/adam-verma/*    
-•	Chae: * *  
-o	Portfolio: * *    
+•	Chae:  
+o	Portfolio: *https://chaejung-50.github.io*    
 o	GitHub: *https://github.com/chaejung-50*  
-o	LinkedIn: * *    
+o	LinkedIn: *https://linkedin.com/in/chaejungg/*    
+
 ###  Animated Gifs/Pictures of App  
  
 ### Tech Stack  
