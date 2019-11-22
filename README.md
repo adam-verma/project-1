@@ -7,7 +7,7 @@
 
 •	Elham Poshtiban:  
 o	[Portfolio Link](https://github.com/elhamposhtiban/Bootstrap-Portfolio)  
-o	[GitHub Link]{https://github.com/elhamposhtiban)  
+o	[GitHub Link](https://github.com/elhamposhtiban)  
 o	[LinkedIn Link](https://www.linkedin.com/in/elham-poshtiban-2a40a4149)  
 •	Adam Verma:   
 o	[Portfolio Link](https://adam-verma.github.io/Responsive-Portfolio/portfolio.html)   
