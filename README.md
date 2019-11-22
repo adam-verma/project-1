@@ -7,10 +7,10 @@
 o	Portfolio: *https://github.com/elhamposhtiban/Bootstrap-Portfolio*  
 o	GitHub: *https://github.com/elhamposhtiban*  
 o	LinkedIn: *https://www.linkedin.com/in/elham-poshtiban-2a40a4149/*  
-•	Adam Verma: *https://www.linkedin.com/in/adam-verma/*  
+•	Adam Verma:   
 o	Portfolio: *https://adam-verma.github.io/Responsive-Portfolio/portfolio.html*   
 o	GitHub: *https://github.com/adam-verma*  
-o	LinkedIn: * *    
+o	LinkedIn: *https://www.linkedin.com/in/adam-verma/*    
 •	Chae: * *  
 o	Portfolio: * *    
 o	GitHub: *https://github.com/chaejung-50*  
