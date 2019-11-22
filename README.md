@@ -6,17 +6,17 @@
 •	Our mission for this site is to provide dietary plans and fitness product suggestions to clients for boosting health and body confidence.  
 
 •	Elham Poshtiban:  
-  [Portfolio Link](https://github.com/elhamposhtiban/Bootstrap-Portfolio)  
- 	[GitHub Link](https://github.com/elhamposhtiban)  
- 	[LinkedIn Link](https://www.linkedin.com/in/elham-poshtiban-2a40a4149)  
+    [Portfolio Link](https://github.com/elhamposhtiban/Bootstrap-Portfolio)  
+ 	  [GitHub Link](https://github.com/elhamposhtiban)  
+ 	  [LinkedIn Link](https://www.linkedin.com/in/elham-poshtiban-2a40a4149)  
 •	Adam Verma:   
- 	[Portfolio Link](https://adam-verma.github.io/Responsive-Portfolio/portfolio.html)   
- 	[GitHub Link](https://github.com/adam-verma)  
- 	[LinkedIn Link](https://www.linkedin.com/in/adam-verma/)    
+ 	  [Portfolio Link](https://adam-verma.github.io/Responsive-Portfolio/portfolio.html)   
+ 	  [GitHub Link](https://github.com/adam-verma)  
+ 	  [LinkedIn Link](https://www.linkedin.com/in/adam-verma/)    
 •	Chae:  
- 	[Portfolio Link](https://chaejung-50.github.io)    
- 	[GitHub Link](https://github.com/chaejung-50)  
- 	[LinkedIn Link](https://linkedin.com/in/chaejungg/)    
+ 	  [Portfolio Link](https://chaejung-50.github.io)    
+ 	  [GitHub Link](https://github.com/chaejung-50)  
+ 	  [LinkedIn Link](https://linkedin.com/in/chaejungg/)    
 
 ###  Animated Gifs/Pictures of App  
  
