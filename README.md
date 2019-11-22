@@ -1,21 +1,22 @@
 # Nutrifit
 
+
 ## Project Summary
 
 •	Our mission for this site is to provide dietary plans and fitness product suggestions to clients for boosting health and body confidence.  
 
 •	Elham Poshtiban:  
-o	Portfolio: *https://github.com/elhamposhtiban/Bootstrap-Portfolio*  
-o	GitHub: *https://github.com/elhamposhtiban*  
-o	LinkedIn: *https://www.linkedin.com/in/elham-poshtiban-2a40a4149/*  
+o	[Portfolio Link](https://github.com/elhamposhtiban/Bootstrap-Portfolio)  
+o	[GitHub Link]{https://github.com/elhamposhtiban)  
+o	[LinkedIn Link](https://www.linkedin.com/in/elham-poshtiban-2a40a4149)  
 •	Adam Verma:   
-o	Portfolio: *https://adam-verma.github.io/Responsive-Portfolio/portfolio.html*   
-o	GitHub: *https://github.com/adam-verma*  
-o	LinkedIn: *https://www.linkedin.com/in/adam-verma/*    
+o	[Portfolio Link](https://adam-verma.github.io/Responsive-Portfolio/portfolio.html)   
+o	[GitHub Link](https://github.com/adam-verma)  
+o	[LinkedIn Link](https://www.linkedin.com/in/adam-verma/)    
 •	Chae:  
-o	Portfolio: *https://chaejung-50.github.io*    
-o	GitHub: *https://github.com/chaejung-50*  
-o	LinkedIn: *https://linkedin.com/in/chaejungg/*    
+o	[Portfolio Link](https://chaejung-50.github.io)    
+o	[GitHub Link](https://github.com/chaejung-50)  
+o	[LinkedIn Link](https://linkedin.com/in/chaejungg/)    
 
 ###  Animated Gifs/Pictures of App  
  
