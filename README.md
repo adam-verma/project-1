@@ -23,7 +23,7 @@ o	LinkedIn: * *
 •	What libraries are used? Bootstrap, jQuery & Firebase, Google Fonts.  
 ### APIs
 •	What APIs did you use? YouTube API, Edamam API  
-## MVP  
+### MVP  
 •	Multiple webpages   
 •	Clean and functional UI   
 •	Linking of multiple APIs   
