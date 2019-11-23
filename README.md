@@ -19,13 +19,19 @@
  	  [GitHub Link](https://github.com/chaejung-50)  
  	  [LinkedIn Link](https://linkedin.com/in/chaejungg/)    
 
-###  Animated Gifs/Pictures of App  
+###  Previews of App 
  Sign-In Page: ![Sign-In Page](/assets/images/SignInPage.PNG)   
+ 
  Form Page: ![Forn Page](/assets/images/Form.PNG)   
+ 
  Home Page: ![Home Page](/assets/images/Home.PNG)   
+ 
  Diet Plan Page: ![Diet Plan Page](/assets/images/SignInPage.PNG)  
- Meal Prep Page: ![Meal Prep Page](/assets/images/MeaPrep.PNG)   
+ 
+ Meal Prep Page: ![Meal Prep Page](/assets/images/MeaPrep.PNG)  
+ 
  Fitness Page: ![Fitness Page](/assets/images/Fitness.PNG)    
+ 
  
 ### Tech Stack  
 •	What languages is it written with? JavaScript, HTML & CSS.  
