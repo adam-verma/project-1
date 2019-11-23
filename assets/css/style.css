@@ -710,5 +710,11 @@ placeholder {
   margin-top: 12px;
 }
 
+.orange-subtitles {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #FF8C00;
+  line-height: 20px;
+}
 
 
