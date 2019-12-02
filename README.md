@@ -7,7 +7,7 @@
 
 ## Contact Us
 •	Elham Poshtiban:  
-    [Portfolio Link](https://github.com/elhamposhtiban/Bootstrap-Portfolio)  
+    [Portfolio Link](https://elhamposhtiban.github.io/Bootstrap-Portfolio/)  
  	  [GitHub Link](https://github.com/elhamposhtiban)  
  	  [LinkedIn Link](https://www.linkedin.com/in/elham-poshtiban-2a40a4149)  
 •	Adam Verma:   
